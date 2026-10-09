@@ -1,0 +1,44 @@
+{
+  "name": "mcbe-particle-master-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-backed Bedrock particle skills, analysis, validation and Wintersky previews",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "particle-master": "tools/cli.mjs"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node tools/cli.mjs doctor && npm test && npm run eval",
+    "eval": "node tools/evaluate.mjs",
+    "examples": "node tools/generate-examples.mjs",
+    "preview": "node tools/preview.mjs",
+    "studio": "node tools/studio.mjs",
+    "mcp": "node tools/mcp.mjs",
+    "knowledge": "node tools/cli.mjs index references --out data/knowledge-index.json",
+    "typecheck": "tsc --allowJs --checkJs --noEmit --skipLibCheck --module nodenext --moduleResolution nodenext --target es2022 examples/original-vfx/BP/scripts/main.js",
+    "preview:all": "node tools/preview-all.mjs",
+    "package:examples": "node tools/package-examples.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "acorn": "8.15.0",
+    "acorn-walk": "8.3.4",
+    "ajv": "8.20.0",
+    "esbuild": "0.25.12",
+    "fflate": "0.8.3",
+    "molangjs": "1.6.6",
+    "playwright": "1.58.2",
+    "pngjs": "7.0.0",
+    "three": "0.134.0",
+    "wintersky": "1.3.3",
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "@minecraft/server": "2.9.0",
+    "typescript": "5.9.3"
+  }
+}

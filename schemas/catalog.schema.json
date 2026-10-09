@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Particle source catalog v1",
+  "required": [
+    "schemaVersion",
+    "sourceInventoryHash",
+    "files",
+    "particles",
+    "textures",
+    "graph",
+    "provenance",
+    "verification"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "sourceInventoryHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "particles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "identifier",
+          "file",
+          "textureResolution",
+          "analysis"
+        ],
+        "properties": {
+          "identifier": {
+            "type": "string",
+            "minLength": 1
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          },
+          "textureResolution": {
+            "type": "object"
+          },
+          "analysis": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "textures": {
+      "type": "array"
+    },
+    "graph": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "edges"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "array"
+        },
+        "edges": {
+          "type": "array"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "structurallyValid",
+        "referencesResolved",
+        "staticChecksPassed",
+        "previewVerified",
+        "minecraftRuntimeVerified"
+      ],
+      "properties": {
+        "structurallyValid": {
+          "type": "boolean"
+        },
+        "referencesResolved": {
+          "type": "boolean"
+        },
+        "staticChecksPassed": {
+          "type": "boolean"
+        },
+        "previewVerified": {
+          "type": "boolean"
+        },
+        "minecraftRuntimeVerified": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

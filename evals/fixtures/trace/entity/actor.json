@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "eval:actor",
+      "particle_effects": {
+        "impact": "pm:shockwave"
+      },
+      "animations": {
+        "attack": "animation.eval.attack",
+        "controller": "controller.animation.eval.attack"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# Whole-effect source analysis
+
+Input can be a folder, ZIP or mcpack. Archive entries are inspected in memory; traversal paths and oversized entries are rejected. Nested archives are inventoried as files and **not automatically expanded**; scan each nested pack explicitly. JSON parsing is strict; comments/trailing commas are reported, not executed or repaired invisibly. The supplied archive parsed without errors.
+
+The catalog inventories every accessible file with a hash and size, all particle identifiers/components, every decodable PNG's pixels/alpha/dimensions, constant/dynamic UV metadata, potential techniques, variable reads/writes and related trigger edges. It discovers manifests and uses their directories as pack roots. If none exists, it labels an inferred loose root and keeps pack identity/version/license unknown.
+
+Texture resolution follows exact relative paths. The primary pack wins, then explicit overlays in order. Multiple pack roots providing the same overlay path are ambiguous. Case-only matches remain unresolved. No global basename search can prove a texture dependency; it can only suggest a candidate for manual review.
+
+Edges distinguish definition, texture, engine/unavailable material, secondary-effect, sound event, entity-local alias, animation/controller usage, literal script spawn, dynamic script spawn and function command spawn. Trigger edges retain keyframe locator/binding/pre-expression details when present. Scripts are parsed with Acorn; they are never run. Dynamic identifiers remain expressions. TypeScript needs transpilation before JavaScript AST analysis.
+
+For each particle, inspect `associatedSources`, `textureResolution`, `textureInspection`, `analysis.expressions`, `analysis.variables`, `analysis.uv`, technique candidates and limitations. Technique labels are heuristic source classifications, not proof that a named effect looks a particular way. For example, sin/cos indicates trigonometric behavior but could affect color instead of motion. A flipbook indicates configured UV animation, not an animated file format.
+
+`trace` returns an undirected neighborhood for finding both dependencies and callers. It is not a chronological or exhaustive runtime call graph. Missing client entity mappings in a merged corpus leave aliases unresolved. Where multiple entities can own an alias, keep the alternatives instead of selecting one by filename. Render controller/material/geometry files are inventoried; broader addon runtime semantics are outside this particle-focused analyzer and must be inspected in the target pack.
+
+The delivered user catalog covers 856 particles with 247 flipbook definitions, 26 parametric-motion definitions, 125 collision components, 194 disc emitters, 443 gradient definitions and 102 definitions with lifetime events. These categories overlap. Every PNG is decoded and hashed. Eleven particle texture paths have no exact match in the supplied archive. Some may be supplied by vanilla/another pack; only an explicit overlay can resolve that claim.
+
+Use source-backed cards in `data/pattern-cards.json` and `references/techniques`. Each evidence entry points to source path, definition hash, identifier, texture, related source edges, source version/license and confidence. Cards provide independently derived formulas and original pack examples. They do not confer permission to reuse unknown-license artwork. Evidence does not update model weights.

@@ -1,0 +1,317 @@
+{
+  "captures": [
+    {
+      "name": "shockwave",
+      "out": "evidence/demo/final",
+      "rendered": true,
+      "particles": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "flame",
+      "out": "evidence/previews/flame",
+      "rendered": true,
+      "particles": [
+        2,
+        16,
+        16,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "vortex",
+      "out": "evidence/previews/vortex",
+      "rendered": true,
+      "particles": [
+        96,
+        96,
+        96,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "blizzard_snow",
+      "out": "evidence/previews/blizzard_snow",
+      "rendered": true,
+      "particles": [
+        18,
+        360,
+        543,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "blizzard_gust",
+      "out": "evidence/previews/blizzard_gust",
+      "rendered": true,
+      "particles": [
+        1,
+        17,
+        17,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "portal_ring",
+      "out": "evidence/previews/portal_ring",
+      "rendered": true,
+      "particles": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "portal_core",
+      "out": "evidence/previews/portal_core",
+      "rendered": true,
+      "particles": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "portal_motes",
+      "out": "evidence/previews/portal_motes",
+      "rendered": true,
+      "particles": [
+        72,
+        72,
+        72,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "lightning",
+      "out": "evidence/previews/lightning",
+      "rendered": true,
+      "particles": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "beam",
+      "out": "evidence/previews/beam",
+      "rendered": true,
+      "particles": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "explosion_sparks",
+      "out": "evidence/previews/explosion_sparks",
+      "rendered": true,
+      "particles": [
+        96,
+        96,
+        96,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "explosion_smoke",
+      "out": "evidence/previews/explosion_smoke",
+      "rendered": true,
+      "particles": [
+        24,
+        24,
+        24,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "debris",
+      "out": "evidence/previews/debris",
+      "rendered": true,
+      "particles": [
+        20,
+        20,
+        20,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "slash",
+      "out": "evidence/previews/slash",
+      "rendered": true,
+      "particles": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "trail",
+      "out": "evidence/previews/trail",
+      "rendered": true,
+      "particles": [
+        1,
+        6,
+        6,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "water",
+      "out": "evidence/previews/water",
+      "rendered": true,
+      "particles": [
+        40,
+        40,
+        40,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "dust",
+      "out": "evidence/previews/dust",
+      "rendered": true,
+      "particles": [
+        2,
+        16,
+        33,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "cinematic",
+      "out": "evidence/previews/cinematic",
+      "rendered": true,
+      "particles": [
+        1,
+        121,
+        30,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "portal-combined",
+      "out": "evidence/previews/portal-combined",
+      "rendered": true,
+      "particles": [
+        74,
+        74,
+        74,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "blizzard-combined",
+      "out": "evidence/previews/blizzard-combined",
+      "rendered": true,
+      "particles": [
+        19,
+        377,
+        560,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "explosion-combined",
+      "out": "evidence/previews/explosion-combined",
+      "rendered": true,
+      "particles": [
+        97,
+        141,
+        44,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "boss-combined",
+      "out": "evidence/previews/boss-combined",
+      "rendered": true,
+      "particles": [
+        73,
+        74,
+        214,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "mcp",
+      "out": "evidence/mcp-preview",
+      "rendered": true,
+      "particles": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    },
+    {
+      "name": "optimization",
+      "out": "evidence/optimization",
+      "rendered": true,
+      "particles": [
+        48,
+        48,
+        48,
+        0
+      ],
+      "previewVerified": true,
+      "minecraftRuntimeVerified": false
+    }
+  ],
+  "minecraftRuntimeVerified": false
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="visual evidence audit approves reviewed frames and rejects changed pixels" time="0.211822" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="cinematic evidence is invalidated by a changed child definition" time="0.150732" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="missing runtime evidence remains unperformed" time="0.001211" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="normalized duplicate ZIP paths are rejected" time="0.026358" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="source and inspection reports satisfy independent metadata contracts" time="0.205116" classname="test" file="tests\evidence.test.mjs"/>
+	<!-- tests 5 -->
+	<!-- suites 0 -->
+	<!-- pass 5 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 1730.7337 -->
+</testsuites>

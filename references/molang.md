@@ -1,0 +1,21 @@
+# MoLang for precise VFX
+
+Search terms: degrees, variable scope, random, age, normalized lifetime, producer, query, parameter.
+
+Use `t=math.clamp(variable.particle_age/variable.particle_lifetime,0,1)` as the conceptual normalized age. For a billboard expression, either repeat this expression or define a curve/update variable with a verified evaluation scope. Do not invent a particle `creation_expression`; the pinned `particle_initialization` exposes `per_update_expression` and `per_render_expression`. Emitter initialization has `creation_expression` and `per_update_expression`.
+
+The built-ins are particle/emitter age, lifetime, four random values for each, and `entity_scale` in an attached context. Particle random values stay fixed across that particle's lifetime. Emitter random values are fixed for the current loop. A moving spiral uses a stable phase plus age, not a newly randomized phase on every frame. Aliases `v.`, `t.`, `q.` and `c.` correspond to variable, temp, query and context. The analyzer normalizes them for dependency discovery.
+
+MoLang trig uses degrees. A full orbit at frequency f is `phi=phi0+360*f*age`. `math.sin(180*t)` produces a rise/fall envelope. An ease-out radius is `r=r0+(R-r0)*(1-(1-t)^2)`. A smoothstep envelope is `3*t*t-2*t*t*t`. For a pulse centered at tc, use a clamped linear/tent envelope or `math.exp(-k*(t-tc)*(t-tc))`; k controls sharpness. These are independent formulas and need target-context syntax checks.
+
+For a horizontal spiral, `(x,y,z)=(r*cos(phi),h*t,r*sin(phi))`. For a vertical portal, `(x,y,z)=(r*cos(phi),centerY+r*sin(phi),depth)`. For a helix, add `heightPerTurn * f * age`. Random offsets keep large populations from moving as one rigid sheet. Keep phase on `particle_random_1`, lifetime variation on `_2`, and sprite selection on `_3` so changes do not inadvertently couple appearance to motion.
+
+Custom variables need producers. Catalog writes identify potential assignments, curves identify named producers, and Script API maps identify external inputs. Lexical evidence is insufficient to prove evaluation ordering or that a producer runs in every branch. A variable read in a child-event pre-expression does not automatically inherit the parent emitter's values. [The event contract](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particleeffectevents?view=minecraft-bedrock-stable) explicitly separates that scope. Provide child defaults or use an orchestrator that initializes both effects.
+
+`query.*` depends on the invoking context. A particle detached from an actor may not have the entity queries an animation has. Never replace an unknown query with zero and call the effect validated. Record the exact query, version and caller. A default such as `variable.quality ?? 1` handles absent custom data; validate the selected quality range and engine support for null-coalescing.
+
+The deterministic checker tokenizes numeric values, named variables, strings, arithmetic/comparison/logical operators, assignments, return statements, function arguments, ternaries and blocks. It checks known math names and emits a review requirement for query contexts. It does not execute MoLang and does not establish complete engine parsing. Loops, arrays, arrow contexts and `this` are explicitly unsupported. Function arity, data-flow ordering and all per-context queries remain engine/source review items. A successful subset parse must not erase these limits.
+
+Prefer client-side formulas for motion, scale and fade. JavaScript should establish spawn/sequence inputs, not update hundreds of particles each server tick. Change texture color/tint intentionally: tint multiplies existing RGB, so a blue tint over a red painted texture can make the result nearly black.
+
+Sources: [particle MoLang integration](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlemolangintegration?view=minecraft-bedrock-stable), [MoLang syntax](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/molangreference/examples/molangconcepts/molangsyntaxguide?view=minecraft-bedrock-stable), the [source-backed component contracts](official/compatibility.md). Keep current syntax/query contracts separate from community visual patterns.

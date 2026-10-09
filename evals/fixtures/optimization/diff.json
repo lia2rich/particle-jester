@@ -1,0 +1,8 @@
+[
+  {
+    "path": "/particle_effect/components/minecraft:emitter_rate_instant/num_particles",
+    "before": 96,
+    "after": 48,
+    "change": "modified"
+  }
+]

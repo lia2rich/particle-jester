@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "engine": "Wintersky 1.3.3 / Three.js r134",
+  "source": "https://github.com/JannisX11/wintersky",
+  "effect": "pm:explosion_sparks",
+  "cues": [
+    {
+      "time": 0,
+      "effect": "pm:explosion_sparks"
+    }
+  ],
+  "seed": 47,
+  "variables": {
+    "variable.quality": 1
+  },
+  "camera": [
+    8,
+    6,
+    10
+  ],
+  "target": [
+    0,
+    1,
+    0
+  ],
+  "captures": [
+    {
+      "file": "frame-0-0.05.png",
+      "time": 0.05,
+      "particles": 48,
+      "emitters": [
+        {
+          "age": 0.03333333333333333,
+          "enabled": false,
+          "particles": 48,
+          "mode": "once",
+          "identifier": "pm:explosion_sparks"
+        }
+      ],
+      "camera": [
+        8,
+        6.000000000000001,
+        10
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "d24fe51de248451b6039ccf624d82b86d9111a3c1030b46c5651ae655ebacd15",
+      "changedPixels": 3717
+    },
+    {
+      "file": "frame-1-0.30.png",
+      "time": 0.3,
+      "particles": 48,
+      "emitters": [
+        {
+          "age": 0.2833333333333333,
+          "enabled": false,
+          "particles": 48,
+          "mode": "once",
+          "identifier": "pm:explosion_sparks"
+        }
+      ],
+      "camera": [
+        8,
+        6.000000000000001,
+        10
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "d5c594052d4eed02b4efdd35170e139bbc42909f8d52832f3b08eb8966997f13",
+      "changedPixels": 3660
+    },
+    {
+      "file": "frame-2-0.60.png",
+      "time": 0.6,
+      "particles": 48,
+      "emitters": [
+        {
+          "age": 0.5833333333333335,
+          "enabled": false,
+          "particles": 48,
+          "mode": "once",
+          "identifier": "pm:explosion_sparks"
+        }
+      ],
+      "camera": [
+        8,
+        6.000000000000001,
+        10
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "fc87fc8bcfc65d3499592036b5352b48e524cc76bdaa2f338d41ff8402d813cf",
+      "changedPixels": 3301
+    },
+    {
+      "file": "frame-3-1.10.png",
+      "time": 1.1,
+      "particles": 0,
+      "emitters": [
+        {
+          "age": 1.0833333333333344,
+          "enabled": false,
+          "particles": 0,
+          "mode": "once",
+          "identifier": "pm:explosion_sparks"
+        }
+      ],
+      "camera": [
+        8,
+        6.000000000000001,
+        10
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "31852b0f5fa6d41b052365b654f276d11e2ccc5e6164eaadfc2ba053e8c43490",
+      "changedPixels": 2743
+    }
+  ],
+  "definitionHashes": {
+    "pm:explosion_sparks": "8273b558c36b0cf6b664b9ed87467ccbc5fdf05eb805a05c4acec7e92bf76f22"
+  },
+  "textureHashes": {
+    "textures/particle/pm/streak": "cac4fa2ddd62e6826410f9b597400ed628510f07f831432d396ac9fa01553ac1"
+  },
+  "browserErrors": [],
+  "rendered": true,
+  "previewVerified": false,
+  "minecraftRuntimeVerified": false,
+  "inspection": "Rendered images still require shape/motion/timing review. This capture command does not automatically approve visual quality.",
+  "limitations": [
+    "No block collisions or entity query/binding runtime",
+    "60 Hz preview differs from engine timing",
+    "Wintersky is an approximation, not the Minecraft engine",
+    "Seed controls this browser simulation, not Minecraft randomness"
+  ]
+}

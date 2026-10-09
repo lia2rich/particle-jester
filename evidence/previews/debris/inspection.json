@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:17.448Z",
+  "captureReportSha256": "a12962682cf1ae49847ac6291a14d79387c99b48046fbec765dd1736cbd37fd5",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Small fragments spread away from the impact."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Brown fragments separate from the brighter sparks."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Fragments fall below the preview ground because terrain collisions are deliberately unavailable here."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Small debris fits the burst; block-scale collision radius is specified separately."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Fragments use their finite lifetime rather than a broad alpha fade."
+    },
+    "density": {
+      "passed": true,
+      "notes": "20 fragments remain sparse."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 0.50, 1.10, 1.70 seconds. Live counts 20, 20, 20, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.069Z",
+  "captureReportSha256": "eb1bf629acc1a55437549266fa251efb94a3571175ea54e50afa1b8dc4a14e01",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Vertically distributed motes form a widening funnel instead of the rejected single ring."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Cyan highlights remain visible on the dark scene."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Random-height paths orbit and rise; sample positions change around the funnel."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The widened camera contains the full approximately six-block funnel."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Low early alpha builds toward the middle and falls near the end."
+    },
+    "density": {
+      "passed": true,
+      "notes": "96 motes define an open funnel; this is a stylized vortex rather than opaque volumetric smoke."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 0.80, 1.80, 2.70 seconds. Live counts 96, 96, 96, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:15.954Z",
+  "captureReportSha256": "299c9758f677f94ca8b707b7a29551d68ab2e9c92b3632376b2b0d33a7ffc28c",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Narrow tapered flame silhouette varies across atlas/time samples."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Warm orange body and lighter tip remain readable."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "The plume extends upward between early and middle samples."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "A compact flame fits the close camera and intended small source."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Transparent edges and age fade avoid a square sprite outline."
+    },
+    "density": {
+      "passed": true,
+      "notes": "A continuous plume forms from 2 then 16 live particles."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 0.80, 1.70, 2.90 seconds. Live counts 2, 16, 16, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

@@ -1,0 +1,9 @@
+# Evaluations
+
+`npm run eval` exercises ten original artifact scenarios, checks deliberate failures and expected repairs, and audits actual saved visual evidence. It writes `evidence/evaluation.json`. `npm test` exercises the lower-level tools separately. The evaluator exits unsuccessfully when an expected diagnosis, repair, contract or required preview comparison fails.
+
+`tasks.json` supplies prompts, expected numeric contracts and visual rubrics for independent Codex runs. Give a candidate the prompt and input fixture, withhold expected output files, and collect its artifacts in the documented layout. Run `node tools/evaluate.mjs --candidate C:/absolute/candidate-checkout`. Review its artwork using the rubric, save a new bound inspection, and run in-game verification separately. The automated artifact harness does not measure general model skill, evaluate arbitrary generated identifiers, or automatically judge art quality. No unseen-prompt model benchmark was performed here.
+
+The missing-texture and malformed-MoLang cases deliberately require explicit replacement artwork and formula intent. The fixture outputs are original known-good regression examples. The optimization case preserves component contracts and compares actual before/after renders; lower density changes the pixel image. It does not prove measured FPS or equivalent perception on all devices.
+
+Every result reports structural, reference, static, preview and Minecraft runtime statuses independently. The trace fixture has no visual test requirement. Runtime evidence is currently absent, so runtime status remains false throughout. Saved renderer captures can exist while preview approval is false. `inspection.json` must bind the capture report hash, record the reviewer and date, and give observations for all seven criteria. Asset or screenshot changes invalidate that approval.

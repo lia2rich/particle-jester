@@ -1,0 +1,54 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Particle Master VFX Demonstration",
+    "description": "Event-driven bounded VFX sequence driver",
+    "uuid": "167fd4d7-f0cb-46ad-8a05-296651fba57a",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      50
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "3df5d972-33ac-4314-92f3-31ac7aef8de0",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "80fc446e-01c1-412d-a389-f72f21098a37",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "03d7857a-294a-4fdd-b771-9cc2046c9a72",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.9.0"
+    }
+  ]
+}

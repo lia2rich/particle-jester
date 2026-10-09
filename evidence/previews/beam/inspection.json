@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.726Z",
+  "captureReportSha256": "2394ee0b63a2832a4f8db99d0a562abfc550305223a56f7b75b0f9f86bde66ca",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "A long horizontal tapered strip is visible in the corrected ground-parallel plane."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Cyan energy remains clear."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "The fixed strip stays in place while its envelope pulses."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Eight-block nominal strip extent is framed by the chosen camera; painted taper is shorter."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Middle sample is bright and later sample fades."
+    },
+    "density": {
+      "passed": true,
+      "notes": "One planar strip avoids accumulation; oblique/rear runtime visibility remains untested."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.05, 0.18, 0.35, 0.60 seconds. Live counts 1, 1, 1, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

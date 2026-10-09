@@ -1,0 +1,17 @@
+# Stable Script API orchestration
+
+Included BP: `examples/original-vfx/BP`. Target engine 1.26.50; declared stable module 2.9.0; type checks use that package. `main.js` owns one script-event subscription, one leave subscription and one death subscription. `vfx.js` owns bounded per-owner timeout IDs and a sequence guard. No broad tick polling or player/entity enumeration is needed.
+
+`Dimension.spawnParticle(identifier, location, optionalMolangVariableMap)` starts an emitter at a fixed world location. It is not a particle handle and does not attach an emitter to an entity. Use client animation locators/controller states for attachment. A script trail can issue short bounded emitters at sampled path positions, but needs a managed update cadence and cleanup.
+
+The demo command is `/scriptevent pm:vfx portal`, `blizzard`, `explosion` or `boss`, sent by an entity. The script ignores unrelated events and requires `sourceEntity`. It snapshots the origin/dimension, schedules only the finite cue list, then rechecks actor validity, dimension and `isChunkLoaded(origin)` before each spawn. Leaving/dying cancels outstanding jobs. It does not kill already-emitted finite particles; their own lifetimes complete the cleanup.
+
+`MolangVariableMap.setFloat('variable.quality', value)` provides the density input. The original rates and caps both multiply by `(variable.quality ?? 1)`; absent input preserves standard quality. Bounds `[0.4,1.5]` are enforced by the driver and declared to the static estimator. Vector maps expand `.x/.y/.z`; RGBA maps expand `.r/.g/.b/.a`; speed/direction maps use `.speed/.direction_x/.direction_y/.direction_z`. Do not confuse these layouts.
+
+For combat abilities, connect the same sequence function to the project's existing `entityHurt`, item-use or projectile-hit dispatcher after confirming the exact signal/property types for that project's dependency. Filter immediately by the ability/actor and enforce cooldown ownership. Do not add damage, explosions or entity scans merely to demonstrate VFX. In before-events, defer world mutations through a supported scheduling API.
+
+Use JSON for emission, motion, fade, size, color and atlas playback. Use entity animation/controllers for moving attachment and animation synchronization. Use scripts for gameplay selection, positions, bounded sequences and dynamic inputs. Server ticks are nominally 20 per second; lag changes wall-clock duration. The preview bridge uses seconds and cannot prove multiplayer or server scheduling behavior.
+
+An unloaded or out-of-height spawn can throw. Validate known height/location preconditions in an ability targeting arbitrary remote locations, not only the owner-adjacent demo. The sample checks chunk availability and uses an origin from a valid actor. Unexpected engine failures should surface in the Content Log; the script does not hide them with catch blocks.
+
+Sources: [Microsoft Dimension](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/dimension?view=minecraft-bedrock-stable), [Microsoft MolangVariableMap](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/molangvariablemap?view=minecraft-bedrock-stable), [Jayly matching method surface](https://jaylydev.github.io/scriptapi-docs/latest/classes/_minecraft_server.MolangVariableMap.html), exact installed `@minecraft/server` type definitions. Older wiki examples can use obsolete method/event names; preserve version-specific evidence.

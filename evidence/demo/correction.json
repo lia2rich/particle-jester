@@ -1,0 +1,19 @@
+{
+  "changes": [
+    {
+      "path": "/particle_effect/components/minecraft:particle_appearance_billboard/size/0",
+      "before": "0.35 + 7.65 * (1 - math.pow(1 - math.clamp(variable.particle_age / variable.particle_lifetime, 0, 1), 2))",
+      "after": "(0.35 + 7.65 * (1 - math.pow(1 - math.clamp(variable.particle_age / variable.particle_lifetime, 0, 1), 2))) / 0.85",
+      "change": "modified"
+    },
+    {
+      "path": "/particle_effect/components/minecraft:particle_appearance_billboard/size/1",
+      "before": "0.35 + 7.65 * (1 - math.pow(1 - math.clamp(variable.particle_age / variable.particle_lifetime, 0, 1), 2))",
+      "after": "(0.35 + 7.65 * (1 - math.pow(1 - math.clamp(variable.particle_age / variable.particle_lifetime, 0, 1), 2))) / 0.85",
+      "change": "modified"
+    }
+  ],
+  "reason": "Compensate painted annulus radius 0.85 to meet the requested eight-block centerline radius.",
+  "previewVerified": true,
+  "minecraftRuntimeVerified": false
+}

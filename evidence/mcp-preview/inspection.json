@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:18.784Z",
+  "captureReportSha256": "ba21443581c0b44c174aeb54c47cfae8996ada60902f5fc6bf9dfa24f2f1ab72",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Unbroken ground annulus expands in perspective."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Cyan remains consistent."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Radius grows rapidly then eases outward."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The final ring is visibly wider than the rejected margin-uncorrected version; centerline design approaches eight blocks."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Bright early/middle ring becomes faint near expiration."
+    },
+    "density": {
+      "passed": true,
+      "notes": "One annulus gives a clean silhouette without layered buildup."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.05, 0.35, 0.75, 0.95 seconds. Live counts 1, 1, 1, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

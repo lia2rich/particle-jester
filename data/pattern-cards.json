@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "cards": [
+    {
+      "id": "shockwave",
+      "title": "Precise expanding shockwave",
+      "architecture": "One definition: a horizontal annulus billboard. Multiple definitions only for dust/debris accompaniment.",
+      "formula": "t=clamp(age/life,0,1); r=r0+(R-r0)*(1-(1-t)^2); billboardHalfExtent=r/paintedRadiusFraction.",
+      "implementation": "Use emitter_transform_xz, one instant child, zero speed and a finite 0.9 s child lifetime. The original texture paints radius at 0.85, so divide half extents by 0.85. Fade alpha independently; do not move particles radially to approximate a continuous ring.",
+      "performance": "One large blended quad can cause overdraw despite one-particle count; check ground offset and distant readability.",
+      "limitations": [
+        "The original demonstration targets an eight-block ring centerline radius; raster antialiasing gives it finite thickness. Preview perspective turns a world circle into a screen ellipse."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/shockwave.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "vortex",
+      "title": "Vortex, tornado and helix",
+      "architecture": "One parametric definition for motes; add debris/cloud layers for a full tornado.",
+      "formula": "phi=phi0+360*f*age; r=r0+(R-r0)*t; xyz=(r*cos(phi),H*t,r*sin(phi)).",
+      "implementation": "Use a fixed particle_random phase and an age-derived angle. Separate vertical drift from radial widening. For a funnel, set r(y) to a designed profile and distribute vertical starting positions; the supplied original demonstrates an expanding rising spiral, not volumetric fluid simulation.",
+      "performance": "Use fewer distinct sprites for the outer silhouette and denser tiny motes; avoid per-tick server motion.",
+      "limitations": [
+        "A particle path is deterministic conditional on its random seed; Minecraft seeds need not match preview seeds."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/vortex.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "blizzard",
+      "title": "Large directional blizzard",
+      "architecture": "Two definitions and a simultaneous sequence: drifting flakes plus sparse wind streaks.",
+      "formula": "v=(6,-2,1) blocks/s; lateral a=A*sin(w*age+phi); density≈rate*life.",
+      "implementation": "Emit across a broad box; place the upstream volume to create arrival time. Use small near/far flakes and a second material/shape layer for gust readability. Both density/caps use a bounded quality input, defaulting to standard.",
+      "performance": "At standard quality flakes approach 660 alive per emitter; high quality approaches 990, before concurrent actors. Profile large transparent volumes.",
+      "limitations": [
+        "No true wind field or terrain occlusion is simulated. Detached script sequence origins remain fixed."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/blizzard_snow.particle.json",
+        "examples/original-vfx/RP/particles/blizzard_gust.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "lightning",
+      "title": "Electrical arcs and lightning",
+      "architecture": "One authored jagged sprite for a vertical flash; multiple oriented definitions/scripts for arbitrary endpoints.",
+      "formula": "Segment P_i=A+(B-A)*i/n + perpendicularOffset_i; offset endpoints=0.",
+      "implementation": "The original vertical flash uses a jagged white texture with a finite 0.22 s tail. For arbitrary endpoints, compute a stable basis and author segment direction/length inputs or a verified locator/animation orientation. Avoid treating a stretched straight streak as a bent 3D arc.",
+      "performance": "Sparse bright flashes read strongly; additive overlap can saturate. Cap concurrent arc segments.",
+      "limitations": [
+        "The example is a static jagged billboard flash, not a general arbitrary-endpoint 3D lightning solver."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/lightning.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "portal",
+      "title": "Layered magical portal",
+      "architecture": "Three definitions started together; controller ownership for an attached persistent portal.",
+      "formula": "Ring plane xy; motes=(r*cos(phi),centerY+r*sin(phi),depthOscillation).",
+      "implementation": "Use a dark/translucent core for depth, an original rune ring for silhouette and orbiting motes for motion. Place layers at separate depth offsets. Keep color palette and fade clocks coherent. Preview each independently and all three together.",
+      "performance": "Preserve ring/core at low quality; reduce motes first. Large overlapping quads dominate overdraw.",
+      "limitations": [
+        "A billboard portal has a preferred plane. Crossing it or rotating an attached portal requires engine/actor tests."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/portal_ring.particle.json",
+        "examples/original-vfx/RP/particles/portal_core.particle.json",
+        "examples/original-vfx/RP/particles/portal_motes.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "beam",
+      "title": "Energy beam",
+      "architecture": "One planar energy sprite; crossed planes or oriented segments for a beam visible from more directions.",
+      "formula": "D=B-A; length=sqrt(D·D); center=(A+B)/2; normalized direction=D/length.",
+      "implementation": "The original example is a fixed plane strip. Arbitrary endpoints need an oriented animation/locator or verified direction input. Size is half the visible length after sprite margins. Add a separate impact definition; do not scale rate to control beam length.",
+      "performance": "A few long quads may cover much of the screen. Test oblique and rear viewpoints before promising a cylindrical beam.",
+      "limitations": [
+        "The included fixed-plane example is not a fully dynamic endpoint beam; its limitation is explicit."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/beam.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "explosion",
+      "title": "Debris, smoke and sparks explosion",
+      "architecture": "Four definitions with staggered cues; particle events can own a simpler fixed sequence.",
+      "formula": "Impact at 0; debris at 0.08 s; smoke at 0.15 s; totalTail=max(cue+childLife).",
+      "implementation": "Keep a readable sharp impact before the slow smoke rise. Sparks move outward and drag; debris uses gravity/collision; smoke grows and fades. Each material/motion layer owns its finite lifetime.",
+      "performance": "Reduce accents without removing the impact silhouette. Collision debris requires block-world profiling.",
+      "limitations": [
+        "Preview disables real block collisions. No gameplay explosion/damage is performed by the VFX sample."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/shockwave.particle.json",
+        "examples/original-vfx/RP/particles/explosion_sparks.particle.json",
+        "examples/original-vfx/RP/particles/debris.particle.json",
+        "examples/original-vfx/RP/particles/explosion_smoke.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "slash",
+      "title": "Sword slash and trail",
+      "architecture": "A finite slash billboard plus a world-space trail; animation locator or bounded script sampling for attachment.",
+      "formula": "theta=theta0+omega*age; alpha=1-t; trailSampleSpacing≈speed/sampleRate.",
+      "implementation": "The original arc rotates through a finite sweep; it is an authored silhouette, not a true ribbon mesh. Attach to a verified sword locator/keyframe, leave old trail children in world space and synchronize the hit moment.",
+      "performance": "Keep samples spatially spaced rather than spawning each server tick indiscriminately.",
+      "limitations": [
+        "Detached demo particles do not follow a real sword. Test animation geometry and controller/keyframe context."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/slash.particle.json",
+        "examples/original-vfx/RP/particles/trail.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "projectile",
+      "title": "Projectile trail and impact",
+      "architecture": "One trail definition plus a hit definition and a projectile animation or script lifecycle.",
+      "formula": "spacing=v/f; finiteChildTail<cleanupDelay; impactTime=observedHitEvent.",
+      "implementation": "Use a short-lived world-space trail; avoid local position following for old particles. Subscribe to the exact projectile-hit event in the target module, filter managed projectiles and spawn one impact.",
+      "performance": "Cache managed projectiles if sampling is necessary; prune invalid references and bound cadence.",
+      "limitations": [
+        "The repository supplies particle layers and integration guidance; it does not create a new gameplay projectile entity."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/trail.particle.json",
+        "examples/original-vfx/RP/particles/explosion_sparks.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "boss",
+      "title": "Staged boss ability",
+      "architecture": "Seven cues via bounded Script API sequence; animation synchronization may be a better owner in a real boss.",
+      "formula": "Warning 0–1.5 s; strike 1.5 s; radial impact 1.6 s; aftermath 1.7–4.05 s.",
+      "implementation": "The sample snapshots one origin, guards against overlapping casts by owner and checks validity before delayed cues. A real gameplay telegraph must match attack geometry and damage timing. Keep visible warning and impact at all quality tiers.",
+      "performance": "Budget overlapping tails and simultaneous bosses; cancel pending jobs on owner loss.",
+      "limitations": [
+        "This sample creates visual cues only. It is not a damage ability or a tested multiplayer boss system."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/portal_ring.particle.json",
+        "examples/original-vfx/RP/particles/portal_motes.particle.json",
+        "examples/original-vfx/RP/particles/lightning.particle.json",
+        "examples/original-vfx/RP/particles/shockwave.particle.json",
+        "examples/original-vfx/RP/particles/explosion_sparks.particle.json",
+        "examples/original-vfx/RP/particles/debris.particle.json",
+        "examples/original-vfx/RP/particles/explosion_smoke.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "glyphs",
+      "title": "Animated symbols and glyphs",
+      "architecture": "One rune definition for rotation/pulse; a flipbook for changing symbol frames; multiple layers for independent symbols.",
+      "formula": "phi=omega*age; atlasCell=floor(fps*age) subject to the verified count/loop rule.",
+      "implementation": "Use an original high-contrast transparent glyph and preserve its reading plane. Separate glyph scale from aura glow. If changing symbols, generate known-size atlas cells rather than inferring them from an arbitrary tall PNG.",
+      "performance": "Keep symbols readable at the intended distance; aggressive alpha fades can erase small strokes.",
+      "limitations": [
+        "The original rune animates rotation/fade. A changing glyph atlas is a derived variant, not an untested included asset."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/portal_ring.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "flame",
+      "title": "Animated flame",
+      "architecture": "One finite steady emitter with original eight-frame vertical atlas.",
+      "formula": "Frame pixels=(32,32); PNG=(32,256); step=(0,32); max_frame=8; fps=10.",
+      "implementation": "Use white tint on the painted flame atlas, upward speed/acceleration and shrinking/fading children. Rate and cap scale together with quality. Validate each mapped cell and preview animation differences; one screenshot does not prove frame order.",
+      "performance": "Preserve core flame shape while scaling accents; blended overlap can become opaque at high rates.",
+      "limitations": [
+        "Use pinned frame-count semantics; tutorial wording differs. Light emission is not created just by a bright texture."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/flame.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "water",
+      "title": "Water splash",
+      "architecture": "One droplet burst; add a horizontal ring and mist for a layered splash.",
+      "formula": "v0 outward; y(age)=y0+vy*age-0.5*g*age^2 without drag.",
+      "implementation": "Make droplets small and fast with gravity. Use a separate ripple instead of forcing one droplet definition to also be a ring. Compare the source atlas ripple technique to an original procedural annulus without copying artwork.",
+      "performance": "Avoid huge blended droplets; sparse high-contrast droplets can read better than dense mist.",
+      "limitations": [
+        "The sample is a droplet layer; water-surface placement and ripple orientation need real terrain/context."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/water.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "smoke",
+      "title": "Smoke growth and fade",
+      "architecture": "One finite burst/steady definition; additional density layers for depth.",
+      "formula": "halfSize=s0+growth*t; alpha=a0*(1-t); drag damps drift.",
+      "implementation": "Use a soft original sprite with blended alpha and a deliberate dark/light palette. Size growth and fade are separate; do not compensate a missing fade by shortening every lifetime. Keep old smoke in world space.",
+      "performance": "Large overlapping translucent billboards can dominate cost even at low counts.",
+      "limitations": [
+        "The bridge approximates lighting/materials; visibility against terrain and sky needs Bedrock checks."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/explosion_smoke.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "dust",
+      "title": "Environmental dust",
+      "architecture": "A broad low-height steady volume with finite exposure; state-owned looping variant for ambient environments.",
+      "formula": "Density≈rate*life; lateral drift plus a low alpha envelope.",
+      "implementation": "Keep scale small enough to read as dust while distributing across the scene. Use local/world ownership appropriate to a moving environment. Maintain a finite default to avoid leaving endless ambient emitters after a command.",
+      "performance": "Scale density by area and observer distance; avoid repeatedly spawn a whole volume for every player tick.",
+      "limitations": [
+        "No automatic biome/weather trigger is added. Connect through existing environment ownership."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/dust.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    },
+    {
+      "id": "cinematic",
+      "title": "Particle-event cinematic",
+      "architecture": "A zero-child root emitter with timeline events; scripts/animations for actor-aware/gameplay stages.",
+      "formula": "timeline keys are absolute emitter seconds; sequence event nodes execute together, not as delays.",
+      "implementation": "Use named events pointing to actual identifiers and explicit type emitter. Child variables do not automatically inherit root inputs. Keep root emission finite and child tails bounded. Verify every secondary edge and preview the whole chain.",
+      "performance": "Sum overlapping child counts and tails; the zero-child root still creates emitters.",
+      "limitations": [
+        "Audio and actor-binding require context; this original event sequence contains no sound or inherited parameter assumptions."
+      ],
+      "originalExamples": [
+        "examples/original-vfx/RP/particles/cinematic.particle.json",
+        "examples/original-vfx/RP/particles/shockwave.particle.json",
+        "examples/original-vfx/RP/particles/explosion_sparks.particle.json",
+        "examples/original-vfx/RP/particles/explosion_smoke.particle.json"
+      ],
+      "evidence": [],
+      "confidence": {
+        "contracts": "pinned official docs/metadata",
+        "technique": "independently derived from source features and mathematical design",
+        "preview": "see current per-example evidence; never inferred from source structure"
+      }
+    }
+  ]
+}

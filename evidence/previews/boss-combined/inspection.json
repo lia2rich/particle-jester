@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:18.689Z",
+  "captureReportSha256": "d846383b1c3d4e0f44cf15590d3a53c9c30aadbcd7fe154adff61e0b795c79f4",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Vertical warning frame precedes a ground shockwave and impact burst."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Violet warning, blue strike, cyan ring and warm sparks communicate stages."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Strike is captured near 1.55 s and impact near 1.9 s."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Ground wave is larger than the warning ring; both share the actor origin snapshot."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Each stage fades; the final frame is empty."
+    },
+    "density": {
+      "passed": true,
+      "notes": "Sampled peak 214 separates warning and impact; concurrent actor performance is pending."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 1.55, 1.90, 4.20 seconds. Live counts 73, 74, 214, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

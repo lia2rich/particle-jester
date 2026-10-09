@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:18.420Z",
+  "captureReportSha256": "86334a5df3971eaeaa4ba57b73a8ba9d81931293c3e2debd78242691ed458340",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Rune, center and motes form a coherent layered vertical portal."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Visible violet core supports the rune and blue motes."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Motes orbit while the rune rotates and core holds its position."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The core stays inside the outer frame."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "The combined middle is clear without hiding the rune."
+    },
+    "density": {
+      "passed": true,
+      "notes": "74 particles keep all three layers distinct."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 1.30, 2.50, 4.10 seconds. Live counts 74, 74, 74, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:18.141Z",
+  "captureReportSha256": "d85253811cf6e0d8ca4a3d7d9b404a8db9d42c9eece9c5755c1611cc891d07d4",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Broad small soft clouds occupy the near-ground volume."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Warm brown dust remains intentionally subdued."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Cloud locations drift across the ground region over time."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Low-height distribution reads as environmental dust."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Low alpha avoids an opaque fog wall."
+    },
+    "density": {
+      "passed": true,
+      "notes": "Density grows from 2 to 33 live particles; detail stays restrained."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 0.80, 2.00, 3.80 seconds. Live counts 2, 16, 33, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

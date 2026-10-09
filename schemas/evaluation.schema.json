@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Particle artifact evaluation v1",
+  "required": [
+    "schemaVersion",
+    "scope",
+    "results",
+    "summary"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "results": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "description",
+          "regressionPassed",
+          "verification",
+          "previewEvidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "regressionPassed": {
+            "type": "boolean"
+          },
+          "verification": {
+            "type": "object",
+            "required": [
+              "structurallyValid",
+              "referencesResolved",
+              "staticChecksPassed",
+              "previewVerified",
+              "minecraftRuntimeVerified"
+            ],
+            "properties": {
+              "structurallyValid": {
+                "type": "boolean"
+              },
+              "referencesResolved": {
+                "type": "boolean"
+              },
+              "staticChecksPassed": {
+                "type": "boolean"
+              },
+              "previewVerified": {
+                "type": "boolean"
+              },
+              "minecraftRuntimeVerified": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          },
+          "previewEvidence": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total",
+        "regressionPassed",
+        "previewVerified",
+        "minecraftRuntimeVerified"
+      ],
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "regressionPassed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "previewVerified": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        },
+        "minecraftRuntimeVerified": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10
+        }
+      }
+    }
+  }
+}

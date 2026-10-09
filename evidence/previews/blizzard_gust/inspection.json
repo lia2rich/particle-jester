@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.265Z",
+  "captureReportSha256": "e10ddcacd2adb40f352ad3075c1157bf76ed2f450c8c3b0524c1ce244bfe3714",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Distinct horizontal tapered streaks are visible in the corrected middle frames."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Pale blue streaks complement the snow."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Explicit dynamic velocity shifts streak locations across the field."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Long sparse streaks remain readable at the wide camera."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "The increased fade envelope is readable without a solid sheet."
+    },
+    "density": {
+      "passed": true,
+      "notes": "17 middle-frame streaks create a sparse second layer; camera-facing streaks approximate wind instead of world-oriented ribbons."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 2.00, 4.50, 6.60 seconds. Live counts 1, 17, 17, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

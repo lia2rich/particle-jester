@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.166Z",
+  "captureReportSha256": "9ad111c583409a507dd5c6a8efab6546626bad638f32886384a9ba7d329b4c2d",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Near/far flakes occupy a broad volume rather than one small cluster."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Cool white flakes contrast with the scene."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "The population moves through the volume as snow drifts across the intended wind direction."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Randomized larger flake sizes improve visibility at the wide camera."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Individual flakes fade in/out without opaque rectangles."
+    },
+    "density": {
+      "passed": true,
+      "notes": "Hundreds of flakes read as a broad storm; preview sampling gives 543 at 4.5 s rather than the analytic standard ceiling 660."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 2.00, 4.50, 8.10 seconds. Live counts 18, 360, 543, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

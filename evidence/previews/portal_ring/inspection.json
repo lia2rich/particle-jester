@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.372Z",
+  "captureReportSha256": "94d35262c2a82be28d67c15636ea580f87b3c73d849cf14acb605223bc993f09",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Original inner/outer rune rings and radial marks form a vertical circular frame."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Violet ring remains readable."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Slow angular change is supported by the rotation formula and differs across middle samples."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "A roughly five-block frame fits the portal camera."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "The frame builds from faint early to clear middle, then disappears."
+    },
+    "density": {
+      "passed": true,
+      "notes": "One rune sprite preserves a continuous ring silhouette."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 1.30, 2.50, 4.10 seconds. Live counts 1, 1, 1, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

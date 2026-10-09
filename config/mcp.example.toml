@@ -1,0 +1,15 @@
+# Replace <repository> with the absolute path to this checkout; use forward slashes.
+# Stdio bridge implemented and tested by this project.
+[mcp_servers.particle_master]
+command = "node"
+args = ["<repository>/tools/mcp.mjs", "--root", "<repository>"]
+
+# Optional desktop plugin. Blockbench must be open; this entry is not a connection.
+[mcp_servers.blockbench]
+url = "http://127.0.0.1:3000/bb-mcp"
+
+# Optional Snowstorm UI assistance. Pin a reviewed @playwright/mcp version for use.
+# This is the official documented configuration shape, not an installed server.
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]

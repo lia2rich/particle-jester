@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Manually reviewed particle preview inspection",
+  "required": [
+    "reviewer",
+    "reviewedAt",
+    "captureReportSha256",
+    "criteria"
+  ],
+  "properties": {
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewedAt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "captureReportSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "criteria": {
+      "type": "object",
+      "required": [
+        "shape",
+        "color",
+        "motion",
+        "scale",
+        "opacity",
+        "density",
+        "timing"
+      ],
+      "properties": {
+        "shape": {
+          "type": "object",
+          "required": [
+            "passed",
+            "notes"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "color": {
+          "type": "object",
+          "required": [
+            "passed",
+            "notes"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "motion": {
+          "type": "object",
+          "required": [
+            "passed",
+            "notes"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "scale": {
+          "type": "object",
+          "required": [
+            "passed",
+            "notes"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "opacity": {
+          "type": "object",
+          "required": [
+            "passed",
+            "notes"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "density": {
+          "type": "object",
+          "required": [
+            "passed",
+            "notes"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "timing": {
+          "type": "object",
+          "required": [
+            "passed",
+            "notes"
+          ],
+          "properties": {
+            "passed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}

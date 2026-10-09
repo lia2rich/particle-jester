@@ -1,0 +1,74 @@
+{
+  "portal": [
+    {
+      "time": 0,
+      "effect": "pm:portal_ring"
+    },
+    {
+      "time": 0,
+      "effect": "pm:portal_core"
+    },
+    {
+      "time": 0,
+      "effect": "pm:portal_motes"
+    }
+  ],
+  "blizzard": [
+    {
+      "time": 0,
+      "effect": "pm:blizzard_snow"
+    },
+    {
+      "time": 0,
+      "effect": "pm:blizzard_gust"
+    }
+  ],
+  "explosion": [
+    {
+      "time": 0,
+      "effect": "pm:shockwave"
+    },
+    {
+      "time": 0,
+      "effect": "pm:explosion_sparks"
+    },
+    {
+      "time": 0.08,
+      "effect": "pm:debris"
+    },
+    {
+      "time": 0.15,
+      "effect": "pm:explosion_smoke"
+    }
+  ],
+  "boss": [
+    {
+      "time": 0,
+      "effect": "pm:portal_ring"
+    },
+    {
+      "time": 0,
+      "effect": "pm:portal_motes"
+    },
+    {
+      "time": 1.5,
+      "effect": "pm:lightning"
+    },
+    {
+      "time": 1.6,
+      "effect": "pm:shockwave"
+    },
+    {
+      "time": 1.6,
+      "effect": "pm:explosion_sparks"
+    },
+    {
+      "time": 1.7,
+      "effect": "pm:debris"
+    },
+    {
+      "time": 1.85,
+      "effect": "pm:explosion_smoke"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:18.606Z",
+  "captureReportSha256": "11d9eba876b75d665c13bc736063b5c92e96d305d63a1cfe32f67c54a7e1eef8",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Ring, spark burst, debris and smoke share one center."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Cool ring and warm sparks create clear layer separation."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Impact spreads, then smoke becomes the residual layer."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The ground ring is larger than the central burst, as designed."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Ring and sparks fade before the final empty frame."
+    },
+    "density": {
+      "passed": true,
+      "notes": "The peak sampled count is 141; later count 44 gives a reduced residual."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.05, 0.35, 1.00, 2.60 seconds. Live counts 97, 141, 44, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Capture/inspection hashes bind exact JSON bytes; preserve them on checkout.
+*.json -text
+*.png binary
+*.zip binary
+*.mcpack binary
+*.mcaddon binary

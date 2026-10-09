@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:18.045Z",
+  "captureReportSha256": "663e95073d267fd9a1b4c41b8cf8b4082400ac8a916b5468660ab5bde8ffa5c2",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Droplets form a dispersed short splash."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Blue highlights remain readable."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Droplets spread then fall, with some leaving the visible ground area."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Small droplets fit the close splash camera."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "The splash fades toward its end."
+    },
+    "density": {
+      "passed": true,
+      "notes": "40 droplets define a light radial splash."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.05, 0.30, 0.80, 1.30 seconds. Live counts 40, 40, 40, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

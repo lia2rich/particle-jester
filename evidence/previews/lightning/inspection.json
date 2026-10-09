@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.624Z",
+  "captureReportSha256": "bd4028833939e7e005152354989c9bfc83fcc369af4c4fc503176e34ed58516b",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "A narrow jagged planar bolt is visible from top to near ground."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Blue-white line matches the electrical cue."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "This is a static jagged sprite with a rapid fade, not independently moving branches."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The revised camera contains the full seven-block strike."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "The bolt fades across 0.02, 0.08 and 0.16-second samples."
+    },
+    "density": {
+      "passed": true,
+      "notes": "One sprite provides a single clean strike; branch-rich lightning would need extra layers."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.02, 0.08, 0.17, 0.30 seconds. Live counts 1, 1, 1, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

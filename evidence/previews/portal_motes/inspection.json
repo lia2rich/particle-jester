@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.543Z",
+  "captureReportSha256": "162f418260223e3011c735d2115344b0bf3a9c454bf4b66ee1551ea9c8bca3f2",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Motes form an open circular orbit around the vertical frame."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Blue highlights distinguish motes from violet runes."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Mote positions differ across the two middle captures as they orbit."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Orbit radius aligns with the rune perimeter."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Motes build and fade with the four-second envelope."
+    },
+    "density": {
+      "passed": true,
+      "notes": "72 motes preserve an open rim and do not fill the center."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 1.30, 2.50, 4.10 seconds. Live counts 72, 72, 72, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

@@ -1,0 +1,71 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "pm:portal_ring",
+      "basic_render_parameters": {
+        "material": "particles_blend",
+        "texture": "textures/particle/pm/rune"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 1
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 0.01
+      },
+      "minecraft:emitter_shape_point": {
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ]
+      },
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": 4
+      },
+      "minecraft:particle_initial_speed": 0,
+      "minecraft:particle_motion_parametric": {
+        "relative_position": [
+          0,
+          3,
+          0
+        ],
+        "rotation": "variable.particle_age * 24"
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [
+          2.7,
+          2.7
+        ],
+        "facing_camera_mode": "emitter_transform_xy",
+        "uv": {
+          "texture_width": 128,
+          "texture_height": 128,
+          "uv": [
+            0,
+            0
+          ],
+          "uv_size": [
+            128,
+            128
+          ]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": [
+          0.38,
+          0.25,
+          1,
+          "math.sin(180 * math.clamp(variable.particle_age / variable.particle_lifetime, 0, 1))"
+        ]
+      }
+    }
+  }
+}

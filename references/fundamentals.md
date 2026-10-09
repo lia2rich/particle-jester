@@ -1,0 +1,25 @@
+# Particle ownership, timing and emission
+
+Search terms: emitter, lifetime, local space, sphere, disc, box, entity_aabb, collision, curves.
+
+A particle definition describes an emitter and its children. `description.identifier` is the lookup key; the filename is a storage location. A texture path is relative to the RP root and usually omits `.png`. Neither the filename nor an animation alias is the particle identifier. Materials and geometry remain part of the resource stack, even if the emitter itself renders only billboards.
+
+Emitter rate, emitter lifetime, particle lifetime and animation lifetime are separate clocks. `emitter_lifetime_once.active_time:2` emits for two seconds. A child with `max_lifetime:3` can survive until roughly five seconds after spawn. A repeated animation keyframe can create another emitter even while previous children remain. For a finite cinematic, bound both the spawning period and the longest tail. Collision expiration, lifetime expressions and block-based expiration may end a child earlier.
+
+Use one rate component: instant for a burst, steady for an ongoing rate, manual for secondary events that request particles from an emitter. Manual emission is not an arbitrary scripting method. Particle-event type `particle` and `particle_with_velocity` target a manual-rate definition. A loop belongs to a controller state or another ownership system with a known stop condition. An indefinite fire-and-forget loop has no natural cleanup guarantee.
+
+Shapes set initial distribution; motion determines the trajectory afterwards. A sphere fills a volume by default or a surface with `surface_only`. A disc's normal determines its plane. A box uses half dimensions, so `[12,7,12]` spans 24×14×24 blocks. An entity AABB shape depends on an actor context and cannot be validated by a detached `/particle` preview. Point/custom offsets can be expressions. An outward direction on a point is not a precise ring distribution.
+
+For original procedural distributions, uniform angular phase is `360 * variable.particle_random_1`. A uniform disc area uses `R * math.sqrt(variable.particle_random_2)`; a uniform radial value overweights the center relative to area. A uniform sphere direction can use `y=2u-1`, `rho=sqrt(1-y*y)`, `x=rho*cos(phi)`, `z=rho*sin(phi)`. To fill a sphere volume, scale radius by `u^(1/3)`. Keep each random sample in a stable built-in random variable; repeatedly evaluating `math.random` in update expressions creates jitter.
+
+Particle units are blocks and seconds; angle/trig units are degrees. Billboard size is a half extent: `[0.5,0.5]` spans one block, before accounting for empty texture margins. Model locators use model units; 16 model units correspond to one block. Always state which coordinate system a calculation uses.
+
+Local-space position keeps particles relative to the emitter/actor. Rotation carries them with its rotation; inherited velocity is another choice. Trails usually leave old particles in world space; attached auras usually follow. Choosing a local-space component alone does not attach a script-spawned emitter to an entity. For an animation locator, validate the locator, client entity particle alias and binding lifetime together.
+
+Dynamic motion uses initial velocity, acceleration and drag. Constant gravity is Y acceleration; with drag, velocity does not follow an undamped parabola. Parametric relative positions express an authored trajectory from particle age. Do not simultaneously author two independent positional movement models and assume their effects add. A rotation-only parametric component alongside dynamic translation occurs in the supplied corpus; that combination is different from competing relative-position paths and needs target-specific inspection.
+
+Collision radius must lie between 0 and 0.5 in the pinned metadata. A restitution coefficient controls rebound, and collision drag damps movement along surfaces. The local bridge disables ground collision deliberately because an infinite preview plane cannot establish block collision behavior. Test uneven ground, walls, chunk boundaries and expiry in Minecraft.
+
+Curves expose named variables. Linear nodes interpolate across an input/range; Bézier and Catmull-Rom shape timing differently; a Bézier chain uses keyed node/tangent values. Normalize a lifetime input before reusing a curve. Changing `horizontal_range` changes how fast nodes are traversed, not how long the particle lives. A fade curve cannot terminate an emitter by itself.
+
+Sources: [component list](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlecomponentlist?view=minecraft-bedrock-stable), [curve contract](https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlecurves?view=minecraft-bedrock-stable), [Mojang pinned samples](https://github.com/Mojang/bedrock-samples/tree/46ba6ea985fb5a92d79a9419198f10dda14c199d/resource_pack/particles). Distribution formulas above are independent mathematical derivations, not copied particle implementations.

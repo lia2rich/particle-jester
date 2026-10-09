@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.462Z",
+  "captureReportSha256": "3cf560da7bfbf83e1af302eac817ad54b7196509b218b1260d77d7d0e64b18c8",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "A soft disk fills the inner area with feathered edges."
+    },
+    "color": {
+      "passed": true,
+      "notes": "The corrected violet-blue center is visible; the initial dark version was unreadable."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "The center remains stationary while its envelope changes."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The disk supports the surrounding rune instead of exceeding the full frame."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "The soft center blends with the background without an opaque rectangular boundary."
+    },
+    "density": {
+      "passed": true,
+      "notes": "One core adds depth without excessive layers."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 1.30, 2.50, 4.10 seconds. Live counts 1, 1, 1, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

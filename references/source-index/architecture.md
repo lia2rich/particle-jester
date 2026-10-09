@@ -1,0 +1,13 @@
+# Architecture study and adaptation
+
+Reference revision: `527276c024ecf2245fc5ae52fc1ffc2dc0a3f440`. Full repository tree census: **1,231 files**, recorded with sizes/hashes in `data/upstream-file-index.json`. We inspected its AGENTS.md, package scripts, master skill, specialist topology, references, schema/data/evaluation layout and concrete source/catalog/validator/preview/live-evidence implementations. Full-tree indexing is not a claim that every source line was manually reviewed.
+
+The reference separates a knowledge layer from deterministic tools. Its master chooses a primary specialist and discloses supporting context incrementally. Its source scanner records actual control/texture references with schema-checked corpus metadata; its catalog builder distinguishes public and local material. Validation emits bounded errors/warnings. Preview success does not establish Bedrock runtime. Live evaluation audits actual screenshot/log evidence rather than promoting static success to a runtime claim.
+
+Specific implementation paths studied: `tools/source-scan.mjs`, `tools/_lib/source-corpus.mjs`, `tools/catalog-build.mjs`, `tools/validate-pack.mjs`, `tools/preview.mjs`, `tools/eval-live.mjs`, `skills/mcbe-json-ui-master/SKILL.md`, and the schema/data/evaluation tree. These establish the architecture, not code to be renamed.
+
+Particle adaptation replaces layout IR/solving and JSON UI bindings with emitter/particle clocks, motion formulas, MoLang variable producers, atlas rectangle mapping, RGBA pixel inspection, aliases/locators and layered timelines. The tool layer has a particle-specific graph and diagnostics; the knowledge layer now has one Particle Jester skill with the former specialist capabilities as supporting modes and 16 original pattern cards. The preview bridge renders the actual particle definitions through the same Wintersky library used by Snowstorm. Its evidence gate binds reviewed frames to JSON and texture hashes.
+
+The new system does not copy the reference repository's code, skills or assets. It retains the useful engineering separation: source-backed contracts, deterministic tools, explicit coverage/uncertainty, original examples, and independently reported structural/reference/static/preview/runtime levels. Unlike a generic prompt collection, it runs real pixel decoding, archive scans, repairs, evaluations and browser captures. This remains tooling and retrieval, not a claim that model weights were trained or that every future advanced effect is automatically production-ready.
+
+Source: [reference repository at inspected revision](https://github.com/boredape874/mcbejsonuimasterAI/tree/527276c024ecf2245fc5ae52fc1ffc2dc0a3f440).

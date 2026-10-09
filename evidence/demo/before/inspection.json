@@ -1,0 +1,17 @@
+{
+  "reviewer": "Codex visual inspection",
+  "reviewedAt": "2026-10-09T05:23:18.908Z",
+  "captureReportSha256": "794ae9c38209bc325c0dac33d4a962892d07e816899bb052e8fc2b496b487c49",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Unbroken ground annulus expands in perspective."
+    },
+    "scale": {
+      "passed": false,
+      "notes": "Compared against final render and annulus mathematics: painted centerline radius is multiplied by 0.85, approaching 6.8 instead of requested eight blocks. Divide billboard half-size by 0.85."
+    }
+  },
+  "previewVerified": false,
+  "minecraftRuntimeVerified": false
+}

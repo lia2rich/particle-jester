@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "components": [
+    {
+      "name": "minecraft:emitter_initialization",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_initialization.json",
+      "sha256": "3be6fa5dfaccfeb9680919cdf8a523fc1b8042ea9c19dc25b268ca5aa96f2e7f",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_lifetime_events",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_lifetime_events.json",
+      "sha256": "c029f509c7592f84f36314e2c3577d396260c33c31dbc249bd2465709c4c665a",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_lifetime_expression",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_lifetime_expression.json",
+      "sha256": "52706689ed4af85ad1821d2998ceeb7cf22be857b234e06c978c10563419d0b7",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_lifetime_looping",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_lifetime_looping.json",
+      "sha256": "3b5af4485ef2e36dba104ae1fbd7f93557150b8a1b4ec2defb6f02a52a8f8f7e",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_lifetime_once",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_lifetime_once.json",
+      "sha256": "9bf499684ab340b27a4ac02019680e1a4fc1f577a1204f359165b3ad67f45e67",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_local_space",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_local_space.json",
+      "sha256": "0644976bc335efc14e19492498284a348d9aa8ff77acdc98ffa5094058372dc9",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_rate_instant",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_rate_instant.json",
+      "sha256": "8bb64b442a783e5143c284a7a3f9ca35c31f892f2e30dcea36f3cef5a8d89a8a",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_rate_manual",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_rate_manual.json",
+      "sha256": "14f9fafc2593ef0ee90b7a5884412e9d91962e97e7870430f4eaa2605bc602c6",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_rate_steady",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_rate_steady.json",
+      "sha256": "ead9eb0ebfa7e0eb163439abd98740e6a48f79aae783478e52a205c07ca6c469",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_shape_box",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_shape_box.json",
+      "sha256": "08ad0f6449905fe19420e53aa9da02dbb7b6767302864edd8058b301e1c5fa6a",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_shape_custom",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_shape_custom.json",
+      "sha256": "de4fc587c38b10c3c8b202c8126bf76d308474a733a298d36a10d970a7920079",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_shape_disc",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_shape_disc.json",
+      "sha256": "08e895ebcdba5d132251afabd2677f9b0320200b5ede3e7453127b72af6c8344",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_shape_entity_aabb",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_shape_entity_aabb.json",
+      "sha256": "937997867696d4510af64b02403b5cac6ff900eff395d8f54ca79653c9ae8b0d",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_shape_point",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_shape_point.json",
+      "sha256": "836755a5ef688c62918676e6c0507b9920c06b16d18b6960e439fb40c639f15b",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:emitter_shape_sphere",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/emitter_shape_sphere.json",
+      "sha256": "340decbc80dd33786d8af3e0e8359e285a700d12a2b3ba05357ef4052634d8b8",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_appearance_billboard",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_appearance_billboard.json",
+      "sha256": "bebf44195162ee93dd07c855dd40c215d96f7366b43ccd66163d2666219c2684",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_appearance_lighting",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_appearance_lighting.json",
+      "sha256": "ac15ad818800bc5c264d29e560b8d2daff5c450078255338e60658aabba4cb9c",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_appearance_tinting",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_appearance_tinting.json",
+      "sha256": "54b65f04fd98cd871577e5544ca10b134d43fde3ed29cd1c4d7d835f2db62728",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_expire_if_in_blocks",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_expire_if_in_blocks.json",
+      "sha256": "cf03cb5526e758ae8383b32af330a0995860c90797da1892c0f4a1c87e16d467",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_expire_if_not_in_blocks",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_expire_if_not_in_blocks.json",
+      "sha256": "d16b079161c504de98754dc7b7302dafa091098148ce4b6dc29ccae3a1499f73",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_initial_speed",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_initial_speed.json",
+      "sha256": "dda1aaab7b6ede4c03aa7651828a5354aa3ab68f0a2a6710610c57824948220a",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_initial_spin",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_initial_spin.json",
+      "sha256": "85125ac1cc6f36ccdcfe84fc2ce12b23033b500366933a4cd3d6d1e292a6e72c",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_initialization",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_initialization.json",
+      "sha256": "0de48485540ef17f08ae24bfaa611b0bd859acc01838f734ecc4e6f0fb01711e",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_kill_plane",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_kill_plane.json",
+      "sha256": "bcbc68655bc1053311431dda66faac8d044e4d4e8024bf7f1a78ccf2134373bf",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_lifetime_events",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_lifetime_events.json",
+      "sha256": "2bc02ed6ed744a26759ab1071f66f2d8a8ce840d1ad5869659d07f4f7e9ec92c",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_lifetime_expression",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_lifetime_expression.json",
+      "sha256": "ce7ef8130ebc2e85f253053f35ddf3df4d2130c03e028af9ff08cc05a70d48a4",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_motion_collision",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_motion_collision.json",
+      "sha256": "9d47f58462e642d1b65e9e993393778d5e5eee1473491fa496c0a9b59feebe02",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_motion_dynamic",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_motion_dynamic.json",
+      "sha256": "5f588842b02d4ecec9a10734499de2bc09b5c8fca5bd7bb4c6c8aa2bd9091e49",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    },
+    {
+      "name": "minecraft:particle_motion_parametric",
+      "metadataPath": "metadata/json_schemas/client/particles/1.21.10/particle_motion_parametric.json",
+      "sha256": "d900de1b1dc05dcf6101b52e0e524d9df6cdf82d70c100edd099dc0b6809a9b8",
+      "sourceCommit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "confidence": "name and reference confirmed; original validator coverage is conservative"
+    }
+  ]
+}

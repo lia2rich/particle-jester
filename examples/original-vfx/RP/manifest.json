@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Particle Master Original VFX",
+    "description": "Original particle examples; target 1.26.50, in-game verification pending",
+    "uuid": "03d7857a-294a-4fdd-b771-9cc2046c9a72",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      50
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "5767e757-ea69-4755-a46e-ae6317be651b",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

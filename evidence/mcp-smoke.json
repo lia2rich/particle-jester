@@ -1,0 +1,16 @@
+{
+  "connected": true,
+  "tools": [
+    "particle_scan",
+    "particle_validate",
+    "particle_trace",
+    "particle_search",
+    "particle_preview"
+  ],
+  "validation": true,
+  "pathBoundary": true,
+  "rendered": true,
+  "previewVerified": false,
+  "minecraftRuntimeVerified": false,
+  "ok": true
+}

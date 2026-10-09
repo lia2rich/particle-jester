@@ -1,0 +1,8 @@
+[
+  {
+    "path": "/particle_effect/description/basic_render_parameters/texture",
+    "before": "textures/missing",
+    "after": "textures/particle/pm/ring",
+    "change": "modified"
+  }
+]

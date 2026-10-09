@@ -1,0 +1,81 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "pm:blizzard_snow",
+      "basic_render_parameters": {
+        "material": "particles_blend",
+        "texture": "textures/particle/pm/snow"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_steady": {
+        "spawn_rate": "220 * (variable.quality ?? 1)",
+        "max_particles": "676 * (variable.quality ?? 1)"
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 5
+      },
+      "minecraft:emitter_shape_box": {
+        "offset": [
+          -10,
+          7,
+          0
+        ],
+        "half_dimensions": [
+          12,
+          7,
+          12
+        ],
+        "direction": [
+          1,
+          -0.3,
+          0.2
+        ]
+      },
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": 3
+      },
+      "minecraft:particle_initial_speed": [
+        6,
+        -2,
+        1
+      ],
+      "minecraft:particle_motion_dynamic": {
+        "linear_acceleration": [
+          "1.5 * math.sin(variable.particle_age * 110 + variable.particle_random_1 * 360)",
+          0,
+          "1.2 * math.cos(variable.particle_age * 90 + variable.particle_random_2 * 360)"
+        ],
+        "linear_drag_coefficient": 0.08
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [
+          "0.12 + 0.13 * variable.particle_random_3",
+          "0.12 + 0.13 * variable.particle_random_3"
+        ],
+        "facing_camera_mode": "lookat_xyz",
+        "uv": {
+          "texture_width": 16,
+          "texture_height": 16,
+          "uv": [
+            0,
+            0
+          ],
+          "uv_size": [
+            16,
+            16
+          ]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": [
+          0.88,
+          0.94,
+          1,
+          "0.95 * math.sin(180 * math.clamp(variable.particle_age / variable.particle_lifetime, 0, 1))"
+        ]
+      }
+    }
+  }
+}

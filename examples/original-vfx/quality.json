@@ -1,0 +1,22 @@
+{
+  "low": {
+    "rateMultiplier": 0.4,
+    "instantMultiplier": 0.6
+  },
+  "standard": {
+    "rateMultiplier": 1,
+    "instantMultiplier": 1
+  },
+  "high": {
+    "rateMultiplier": 1.5,
+    "instantMultiplier": 1.35
+  },
+  "preserve": [
+    "lifetimes",
+    "motion formulas",
+    "ring silhouettes",
+    "timing",
+    "colors"
+  ],
+  "note": "Rates scale together with caps. Benchmark overdraw in game; these are art presets, not measured device guarantees."
+}

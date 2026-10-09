@@ -1,0 +1,11 @@
+node_modules/
+work/
+config/sources.local.json
+config/preview.local.json
+*.log
+.DS_Store
+data/user-evidence/
+data/knowledge-index.json
+references/source-index/user-inspection.md
+references/source-index/corpus-findings.md
+**/.particle-master.json

@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:17.807Z",
+  "captureReportSha256": "6298954714afa4c55d6243ed2f278aceeee32a65f2e81030f79416ba04ac7b16",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "An open curved arc remains recognizable through the samples."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Pale cyan matches the attack palette."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "The arc rotates across the short attack envelope."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The approximately four-block arc is framed around attack height."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Progressive alpha fade removes the arc cleanly."
+    },
+    "density": {
+      "passed": true,
+      "notes": "One arc gives a continuous planar slash."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.02, 0.10, 0.20, 0.40 seconds. Live counts 1, 1, 1, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

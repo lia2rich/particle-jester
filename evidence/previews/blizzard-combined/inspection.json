@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:18.525Z",
+  "captureReportSha256": "bec07dfba9a1045fcb9b3c1925e0b941b06a4ee417ef13f68e741000ffd6202b",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Snow volume and horizontal wind streaks are both visible."
+    },
+    "color": {
+      "passed": true,
+      "notes": "White flakes and blue streaks remain separable."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "Drift and moving streak locations create directional movement across samples."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "The wide camera contains the broad storm volume."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Faded layers overlap without an opaque screen filling sheet."
+    },
+    "density": {
+      "passed": true,
+      "notes": "560 live preview particles at the later sample produce broad density; in-game overdraw is unmeasured."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 2.00, 4.50, 8.10 seconds. Live counts 19, 377, 560, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

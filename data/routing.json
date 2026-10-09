@@ -1,0 +1,144 @@
+[
+  {
+    "skill": "particle-jester",
+    "mode": "complete",
+    "reference": "skills/particle-jester/SKILL.md",
+    "keywords": [
+      "complete system",
+      "end-to-end",
+      "particle pack"
+    ],
+    "priority": 0
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "fundamentals",
+    "reference": "skills/particle-jester/references/modes/fundamentals.md",
+    "keywords": [
+      "emitter",
+      "lifetime",
+      "local space",
+      "gravity"
+    ],
+    "priority": 20
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "molang",
+    "reference": "skills/particle-jester/references/modes/molang.md",
+    "keywords": [
+      "molang",
+      "formula",
+      "spiral",
+      "math",
+      "variable"
+    ],
+    "priority": 20
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "animation",
+    "reference": "skills/particle-jester/references/modes/animation.md",
+    "keywords": [
+      "animation",
+      "controller",
+      "locator",
+      "attach",
+      "keyframe"
+    ],
+    "priority": 20
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "textures",
+    "reference": "skills/particle-jester/references/modes/textures.md",
+    "keywords": [
+      "texture",
+      "png",
+      "atlas",
+      "uv",
+      "spritesheet"
+    ],
+    "priority": 20
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "vfx-design",
+    "reference": "skills/particle-jester/references/modes/vfx-design.md",
+    "keywords": [
+      "shockwave",
+      "portal",
+      "blizzard",
+      "boss",
+      "lightning",
+      "vortex",
+      "design"
+    ],
+    "priority": 20
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "scripting",
+    "reference": "skills/particle-jester/references/modes/scripting.md",
+    "keywords": [
+      "script",
+      "ability",
+      "spawnparticle",
+      "combat"
+    ],
+    "priority": 20
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "debugging",
+    "reference": "skills/particle-jester/references/modes/debugging.md",
+    "keywords": [
+      "broken",
+      "missing",
+      "debug",
+      "fix",
+      "error"
+    ],
+    "priority": 30
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "optimization",
+    "reference": "skills/particle-jester/references/modes/optimization.md",
+    "keywords": [
+      "optimiz",
+      "performance",
+      "mobile",
+      "expensive",
+      "quality tier"
+    ],
+    "priority": 20
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "preview",
+    "reference": "skills/particle-jester/references/modes/preview.md",
+    "keywords": [
+      "preview",
+      "screenshot",
+      "snowstorm",
+      "blockbench",
+      "visually"
+    ],
+    "priority": 30
+  },
+  {
+    "skill": "particle-jester",
+    "mode": "source-analysis",
+    "reference": "skills/particle-jester/references/modes/source-analysis.md",
+    "keywords": [
+      "scan",
+      "archive",
+      "source",
+      "dependency",
+      "trace",
+      "catalog"
+    ],
+    "priority": 30
+  }
+]

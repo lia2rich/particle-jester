@@ -1,0 +1,7 @@
+{
+  "sources": [
+    { "id": "my-pack", "input": "path/to/resource-pack", "license": "record actual source license", "version": "record manifest/source revision" }
+  ],
+  "overlayPriority": ["path/to/verified-vanilla-resource-pack"],
+  "note": "CLI accepts explicit input and --overlay paths. This file is a provenance template, not automatic permission to fetch or execute source code."
+}

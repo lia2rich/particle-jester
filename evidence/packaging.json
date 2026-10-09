@@ -1,0 +1,23 @@
+{
+  "rp": {
+    "output": "dist\\particle-master-vfx.mcpack",
+    "files": 27,
+    "sha256": "a295b300bf7e685b45195da71dc930dd3a5ecd524ae024323524a00a0cb7250e"
+  },
+  "bp": {
+    "output": "dist\\particle-master-driver.mcpack",
+    "files": 4,
+    "sha256": "012a9caaaabe7a26f9d2a10c65341a735b753909d5686b8c60f79603f65a0d0a"
+  },
+  "addon": {
+    "output": "dist\\particle-master-vfx.mcaddon",
+    "sha256": "7e9423d878176c3af24cf4477009de8f1803c13b6bdfb9a34b5e50c1ece786d7"
+  },
+  "checks": {
+    "structurallyValid": true,
+    "referencesResolved": true,
+    "staticChecksPassed": true,
+    "minecraftRuntimeVerified": false
+  },
+  "note": "Script API typecheck and preview inspections have separate reports; packaging does not run Minecraft."
+}

@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-10-09T05:44:52.014Z",
+  "skills": 1,
+  "originalDefinitions": 18,
+  "originalTextures": 8,
+  "tests": {
+    "count": 26,
+    "failures": 0
+  },
+  "evaluations": {
+    "total": 10,
+    "regressionPassed": 10,
+    "previewVerified": 9,
+    "minecraftRuntimeVerified": 0
+  },
+  "reviewedCaptureSets": 24,
+  "reviewedFrames": 96,
+  "scriptTypecheck": {
+    "passed": true,
+    "api": "2.9.0"
+  },
+  "mcp": {
+    "connected": true,
+    "tools": [
+      "particle_scan",
+      "particle_validate",
+      "particle_trace",
+      "particle_search",
+      "particle_preview"
+    ],
+    "validation": true,
+    "pathBoundary": true,
+    "rendered": true,
+    "previewVerified": false,
+    "minecraftRuntimeVerified": false,
+    "ok": true
+  },
+  "packaging": {
+    "rp": {
+      "output": "dist\\particle-master-vfx.mcpack",
+      "files": 27,
+      "sha256": "a295b300bf7e685b45195da71dc930dd3a5ecd524ae024323524a00a0cb7250e"
+    },
+    "bp": {
+      "output": "dist\\particle-master-driver.mcpack",
+      "files": 4,
+      "sha256": "012a9caaaabe7a26f9d2a10c65341a735b753909d5686b8c60f79603f65a0d0a"
+    },
+    "addon": {
+      "output": "dist\\particle-master-vfx.mcaddon",
+      "sha256": "7e9423d878176c3af24cf4477009de8f1803c13b6bdfb9a34b5e50c1ece786d7"
+    },
+    "checks": {
+      "structurallyValid": true,
+      "referencesResolved": true,
+      "staticChecksPassed": true,
+      "minecraftRuntimeVerified": false
+    },
+    "note": "Script API typecheck and preview inspections have separate reports; packaging does not run Minecraft."
+  },
+  "dependencyAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "minecraftRuntimeVerified": false,
+  "limits": [
+    "No target-client/runtime test was performed",
+    "No unseen-prompt model benchmark was performed",
+    "No Blockbench or Snowstorm-editor MCP connection was established; the project stdio bridge was actually connected and tested",
+    "Preview uses Wintersky with documented adapters and approximate sampling; collisions, queries, actor attachment and multiplayer require game tests",
+    "Full source catalog has 11 unresolved texture paths and unresolved ownership/variable contexts; source licenses/versions are unknown"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "performedInMinecraft": false,
+  "reviewPassed": false,
+  "version": "RECORD ACTUAL CLIENT VERSION",
+  "device": "RECORD ACTUAL DEVICE AND GRAPHICS MODE",
+  "reviewer": "RECORD REVIEWER",
+  "testedEffects": [],
+  "testedSequences": [],
+  "testNarrative": "Record actual triggers, observed appearance and timing, repeats, cancellation, collisions, attachment, multiplayer and profiling as applicable. Do not claim unperformed cases.",
+  "contentLog": "content-log.txt",
+  "screenshots": ["in-game.png"],
+  "hashes": {},
+  "artifactHashes": {},
+  "instructions": "Evidence paths are relative to the runtime evidence folder. hashes maps evidence paths to SHA-256 values. artifactHashes maps every RP-relative asset path to the SHA-256 of its tested bytes. Copy this template only when conducting the real client test, and keep both pass flags false until a reviewer has inspected actual results. BP execution also requires independent script/content-log review."
+}

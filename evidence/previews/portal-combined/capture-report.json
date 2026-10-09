@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "engine": "Wintersky 1.3.3 / Three.js r134",
+  "source": "https://github.com/JannisX11/wintersky",
+  "effect": "portal",
+  "cues": [
+    {
+      "time": 0,
+      "effect": "pm:portal_ring"
+    },
+    {
+      "time": 0,
+      "effect": "pm:portal_core"
+    },
+    {
+      "time": 0,
+      "effect": "pm:portal_motes"
+    }
+  ],
+  "seed": 47,
+  "variables": {
+    "variable.quality": 1
+  },
+  "camera": [
+    13,
+    12,
+    15
+  ],
+  "target": [
+    0,
+    2,
+    0
+  ],
+  "captures": [
+    {
+      "file": "frame-0-0.10.png",
+      "time": 0.1,
+      "particles": 74,
+      "emitters": [
+        {
+          "age": 0.08333333333333333,
+          "enabled": false,
+          "particles": 1,
+          "mode": "once",
+          "identifier": "pm:portal_ring"
+        },
+        {
+          "age": 0.08333333333333333,
+          "enabled": false,
+          "particles": 1,
+          "mode": "once",
+          "identifier": "pm:portal_core"
+        },
+        {
+          "age": 0.08333333333333333,
+          "enabled": false,
+          "particles": 72,
+          "mode": "once",
+          "identifier": "pm:portal_motes"
+        }
+      ],
+      "camera": [
+        13,
+        12.000000000000002,
+        14.999999999999998
+      ],
+      "target": [
+        0,
+        2,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "8966d1daa5eded27954ff2faf7ca0e2606e3489188aa0fddaab3d49a5cc6b217",
+      "changedPixels": 2515
+    },
+    {
+      "file": "frame-1-1.30.png",
+      "time": 1.3,
+      "particles": 74,
+      "emitters": [
+        {
+          "age": 1.2833333333333337,
+          "enabled": false,
+          "particles": 1,
+          "mode": "once",
+          "identifier": "pm:portal_ring"
+        },
+        {
+          "age": 1.2833333333333337,
+          "enabled": false,
+          "particles": 1,
+          "mode": "once",
+          "identifier": "pm:portal_core"
+        },
+        {
+          "age": 1.2833333333333337,
+          "enabled": false,
+          "particles": 72,
+          "mode": "once",
+          "identifier": "pm:portal_motes"
+        }
+      ],
+      "camera": [
+        13,
+        12.000000000000002,
+        14.999999999999998
+      ],
+      "target": [
+        0,
+        2,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "991d7d046811cb914078a3298d41cbefc8767b06a3d2bb96928b969343c442ba",
+      "changedPixels": 9645
+    },
+    {
+      "file": "frame-2-2.50.png",
+      "time": 2.5,
+      "particles": 74,
+      "emitters": [
+        {
+          "age": 2.4833333333333294,
+          "enabled": false,
+          "particles": 1,
+          "mode": "once",
+          "identifier": "pm:portal_ring"
+        },
+        {
+          "age": 2.4833333333333294,
+          "enabled": false,
+          "particles": 1,
+          "mode": "once",
+          "identifier": "pm:portal_core"
+        },
+        {
+          "age": 2.4833333333333294,
+          "enabled": false,
+          "particles": 72,
+          "mode": "once",
+          "identifier": "pm:portal_motes"
+        }
+      ],
+      "camera": [
+        13,
+        12.000000000000002,
+        14.999999999999998
+      ],
+      "target": [
+        0,
+        2,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "e0947e9b6ce21fa72256acf07e78ac201e48e34764105d79906a262e247ddd05",
+      "changedPixels": 10025
+    },
+    {
+      "file": "frame-3-4.10.png",
+      "time": 4.1,
+      "particles": 0,
+      "emitters": [
+        {
+          "age": 4.083333333333324,
+          "enabled": false,
+          "particles": 0,
+          "mode": "once",
+          "identifier": "pm:portal_ring"
+        },
+        {
+          "age": 4.083333333333324,
+          "enabled": false,
+          "particles": 0,
+          "mode": "once",
+          "identifier": "pm:portal_core"
+        },
+        {
+          "age": 4.083333333333324,
+          "enabled": false,
+          "particles": 0,
+          "mode": "once",
+          "identifier": "pm:portal_motes"
+        }
+      ],
+      "camera": [
+        13,
+        12.000000000000002,
+        14.999999999999998
+      ],
+      "target": [
+        0,
+        2,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "1efd925a5bc4e133706399f7acac8eeb6104f48fe249903af11eeca55f672562",
+      "changedPixels": 2398
+    }
+  ],
+  "definitionHashes": {
+    "pm:beam": "950a0326f259dc5b2bc56c02874ec1f3e3409eea4856b0d7657f1484e94bdf91",
+    "pm:blizzard_gust": "838dbe9e8d744ec48f7ab632e954949097def1f6fd33121fed23cf9ac9d83cc8",
+    "pm:blizzard_snow": "2e6c151999159fd3317b31c9c33623348a27a254a6f124ea7f2eae81afeb0b8a",
+    "pm:cinematic": "9cf9048253b8ee83d6c7f996267a4a7bfd427469e33546eeb553c2b46822426a",
+    "pm:debris": "46f08e597045806b79e879732d5a6b34a9e456e2bbfee77db329e9f75391da7a",
+    "pm:dust": "e2dcb0da130cae69c80a2ec0adcd77584c5ccc1ae8c01134bb791f0b86387332",
+    "pm:explosion_smoke": "0b81090bd16b3ab4d349ba8f97f91d654d24f345eaf90962e9db9b0aa44d97cf",
+    "pm:explosion_sparks": "c52b5a5c1611871ea20187fb62810e25d9704ff191150d952999a1c3dbbf652d",
+    "pm:flame": "78440231699e4b6b8faea2b80d0ad3cf287848de5218acde33726fb5f0ad9907",
+    "pm:lightning": "37e7024fdc4865fffbcb15fec4f67a0a6316b6dcb18d3865101da57059f2b410",
+    "pm:portal_core": "29073dd18fc3dc65d35d88a55229f2844441e45b7d3e033a755b92e484de19a3",
+    "pm:portal_motes": "7204a3ac6feaa661bbaa7df2867d2e43bf714b03bc4f175e5242d3987abec845",
+    "pm:portal_ring": "b2cde93a02adcfd0e8b41bbccda450be32a5b2116d0306a2d70662f8f8c66858",
+    "pm:shockwave": "3bc8a05375ab1a49c6ec4efccd64c7a279f430d28357761b78ee1e3ab7ce846b",
+    "pm:slash": "886d47bb2dc7d5b9c9bb94cdfdc7a5dca348c71a519c96cc311263ea8f619f88",
+    "pm:trail": "f4a8200dfd4e25021c670a6cae41a3ad529522fc7a8420b112bd083a9889030c",
+    "pm:vortex": "0f13505fcec96f36c56a05827ab3ddf0bd42f7f77d6efba007a52591675880f2",
+    "pm:water": "f91c824d612c7dacd9e4ef1f1037104a5202893275559c5fd053f7356d31f00a"
+  },
+  "textureHashes": {
+    "textures/particle/pm/streak": "cac4fa2ddd62e6826410f9b597400ed628510f07f831432d396ac9fa01553ac1",
+    "textures/particle/pm/snow": "bdeba6d6ece305bb48b41e95dd9466f1d5fecdd1d3446ca564cc8b0127f51704",
+    "textures/particle/pm/soft": "1a4943e55a351dca62050e7f775c32fbc43adb354b522f8d555723c0285b75b0",
+    "textures/particle/pm/flame": "842e6f0a2746853947aaf86d24aae817f77dba682bd8db30d62583ea38c30255",
+    "textures/particle/pm/arc": "98b7f3146a2a6404a4ff5a865f6b839b5184ac9944a193b15ecf928451057c47",
+    "textures/particle/pm/rune": "f9110788a3378d29470a40ff27b4df9954efc60f1a6ccf4b489c60cb2b98621c",
+    "textures/particle/pm/ring": "b21040c407047e83a2b451cc94189a062b13801bcc3d2f67ee227e8834c20482",
+    "textures/particle/pm/slash": "a8d0e4c6ae2ccf43360103c7e172500e801355a274b220c163f47dcd5ea56bc0"
+  },
+  "browserErrors": [],
+  "rendered": true,
+  "previewVerified": false,
+  "minecraftRuntimeVerified": false,
+  "inspection": "Rendered images still require shape/motion/timing review. This capture command does not automatically approve visual quality.",
+  "limitations": [
+    "No block collisions or entity query/binding runtime",
+    "60 Hz preview differs from engine timing",
+    "Wintersky is an approximation, not the Minecraft engine",
+    "Seed controls this browser simulation, not Minecraft randomness"
+  ]
+}

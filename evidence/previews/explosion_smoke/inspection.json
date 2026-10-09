@@ -1,0 +1,37 @@
+{
+  "reviewer": "Codex visual inspection of saved PNG contact sheets",
+  "reviewedAt": "2026-10-09T05:23:16.922Z",
+  "captureReportSha256": "f734abdcb52c153513d22b8d6a6d0230db18f374b47f59f1b2bed01f7ac7b0a1",
+  "criteria": {
+    "shape": {
+      "passed": true,
+      "notes": "Soft separated puffs expand around the impact center."
+    },
+    "color": {
+      "passed": true,
+      "notes": "Dark gray smoke is subtle against this dark scene."
+    },
+    "motion": {
+      "passed": true,
+      "notes": "The plume spreads and drifts upward before fading."
+    },
+    "scale": {
+      "passed": true,
+      "notes": "Increasing puff sizes support the impact instead of replacing the ring silhouette."
+    },
+    "opacity": {
+      "passed": true,
+      "notes": "Low opacity preserves transparent edges; light-background runtime contrast remains pending."
+    },
+    "density": {
+      "passed": true,
+      "notes": "24 puffs create a restrained secondary layer."
+    },
+    "timing": {
+      "passed": true,
+      "notes": "Viewed all four sampled times 0.10, 0.80, 1.60, 2.40 seconds. Live counts 24, 24, 24, 0; final frame has no live particles. This is sampled preview timing, not an engine runtime timing measurement."
+    }
+  },
+  "scope": "Original engineering example at recorded camera and seed; not a general art-quality or Minecraft runtime guarantee",
+  "minecraftRuntimeVerified": false
+}

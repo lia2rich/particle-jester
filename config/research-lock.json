@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-10-09",
+  "repositories": [
+    {
+      "id": "architecture",
+      "url": "https://github.com/boredape874/mcbejsonuimasterAI",
+      "license": "See upstream; research only",
+      "commit": "527276c024ecf2245fc5ae52fc1ffc2dc0a3f440",
+      "version": null
+    },
+    {
+      "id": "snowstorm",
+      "url": "https://github.com/JannisX11/snowstorm",
+      "license": "GPL-3.0-or-later; editor code not redistributed",
+      "commit": "f70fbb58b7399f973441c93cf0766bddabcbc5d8",
+      "version": "3.2.2"
+    },
+    {
+      "id": "blockbench-mcp",
+      "url": "https://github.com/jasonjgardner/blockbench-mcp-plugin",
+      "license": "See upstream; research only",
+      "commit": "d0271716c6434add875fd024e9ea6b474bc0ca09",
+      "version": null
+    },
+    {
+      "id": "blockbench-project",
+      "url": "https://github.com/jasonjgardner/blockbench-mcp-project",
+      "license": "See upstream; research only",
+      "commit": "e9c29a93e54bdd9aaa8a308196dfd4147e47d88c",
+      "version": null
+    },
+    {
+      "id": "bedrock-samples",
+      "url": "https://github.com/Mojang/bedrock-samples",
+      "license": "Minecraft EULA; private fetch only",
+      "commit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "version": "1.26.50.4"
+    }
+  ],
+  "documents": [
+    {
+      "id": "components",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlecomponentlist?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "billboard",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlecomponents/minecraftparticle_appearance_billboard?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "particle-tutorial",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/documents/particleeffects?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "particle-molang",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlemolangintegration?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "events",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particleeffectevents?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "curves",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particlecurves?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "entity-integration",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/particlesreference/particleentityintegration?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "dimension-api",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/dimension?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "molang-map-api",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/molangvariablemap?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "server-module",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/minecraft-server?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "server-2.9-release",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/documents/update1.26.40?view=minecraft-bedrock-stable",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "jayly-policy",
+      "url": "https://jaylydev.github.io/scriptapi-docs/meta/llms.html",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "community-primary",
+      "limitation": null
+    },
+    {
+      "id": "jayly-molang-map",
+      "url": "https://jaylydev.github.io/scriptapi-docs/latest/classes/_minecraft_server.MolangVariableMap.html",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "community-primary",
+      "limitation": "Moving version alias; exact npm types establish the included script target"
+    },
+    {
+      "id": "bedrock-wiki-particles",
+      "url": "https://wiki.bedrock.dev/particles/particles",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "community-primary",
+      "limitation": null
+    },
+    {
+      "id": "playwright-mcp",
+      "url": "https://playwright.dev/docs/getting-started-mcp",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "community-primary",
+      "limitation": null
+    },
+    {
+      "id": "snowstorm-app",
+      "url": "https://snowstorm.app/",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "community-primary",
+      "limitation": null
+    },
+    {
+      "id": "codex-skill-creator",
+      "url": "https://github.com/openai/codex/blob/main/codex-rs/skills/src/assets/samples/skill-creator/SKILL.md",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "openai-api-skills",
+      "url": "https://developers.openai.com/api/docs/guides/tools-skills",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "official",
+      "limitation": null
+    },
+    {
+      "id": "wintersky-api",
+      "url": "https://github.com/JannisX11/wintersky",
+      "accessed": "2026-10-09",
+      "contentCopied": false,
+      "kind": "community-primary",
+      "limitation": null
+    }
+  ],
+  "archive": {
+    "name": "merged_particle_assets.zip",
+    "sha256": "1f717eaf59b0f3f0800eeb760b711de8a711a24ebc7529638d41bb5e17370ec5",
+    "license": "unknown",
+    "manifests": 0
+  },
+  "limitations": [
+    "Repository tree/source studies are not engine tests",
+    "Snowstorm particle MCP not established",
+    "Blockbench endpoint unavailable during build",
+    "No Minecraft runtime session performed"
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "identifier": "pm:shockwave",
+  "found": true,
+  "roots": [
+    {
+      "id": "source-0:particles/effect.json",
+      "kind": "particle",
+      "identifier": "pm:shockwave",
+      "source": "source-0",
+      "file": "particles/effect.json",
+      "root": "",
+      "sha256": "4c406cd4588a304071039c346387f929122d76a5a4c453457d6d5189a362d314"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "source-0:animation_controllers/attack.json#controller.animation.eval.attack",
+      "kind": "controller",
+      "source": "source-0",
+      "file": "animation_controllers/attack.json",
+      "identifier": "controller.animation.eval.attack"
+    },
+    {
+      "id": "source-0:animations/attack.json#animation.eval.attack",
+      "kind": "animation",
+      "source": "source-0",
+      "file": "animations/attack.json",
+      "identifier": "animation.eval.attack"
+    },
+    {
+      "id": "source-0:entity/actor.json",
+      "kind": "client-entity",
+      "source": "source-0",
+      "file": "entity/actor.json",
+      "identifier": "eval:actor"
+    },
+    {
+      "id": "source-0:particles/effect.json",
+      "kind": "particle",
+      "identifier": "pm:shockwave",
+      "source": "source-0",
+      "file": "particles/effect.json",
+      "root": "",
+      "sha256": "4c406cd4588a304071039c346387f929122d76a5a4c453457d6d5189a362d314"
+    },
+    {
+      "id": "source-0:textures/particle/pm/ring.png",
+      "kind": "texture",
+      "file": "textures/particle/pm/ring.png",
+      "source": "source-0"
+    }
+  ],
+  "edges": [
+    {
+      "from": "source-0:particles/effect.json",
+      "to": "source-0:textures/particle/pm/ring.png",
+      "target": "textures/particle/pm/ring",
+      "relation": "texture",
+      "confidence": "resolved",
+      "candidates": [
+        "source-0:textures/particle/pm/ring.png"
+      ]
+    },
+    {
+      "from": "source-0:particles/effect.json",
+      "to": null,
+      "target": "particles_blend",
+      "relation": "material",
+      "confidence": "engine-or-unavailable",
+      "candidates": []
+    },
+    {
+      "from": "source-0:animations/attack.json#animation.eval.attack",
+      "to": "source-0:particles/effect.json",
+      "target": "pm:shockwave",
+      "relation": "particle-trigger-alias",
+      "path": "/animations/animation.eval.attack",
+      "confidence": "resolved",
+      "candidates": [
+        "source-0:particles/effect.json"
+      ],
+      "triggerDetails": {
+        "owner": "source-0:entity/actor.json",
+        "alias": "impact",
+        "effect": "impact",
+        "locator": "origin",
+        "bind_to_actor": false
+      }
+    },
+    {
+      "from": "source-0:entity/actor.json",
+      "to": "source-0:particles/effect.json",
+      "target": "pm:shockwave",
+      "relation": "particle-alias",
+      "path": "/description/particle_effects/impact",
+      "confidence": "resolved",
+      "candidates": [
+        "source-0:particles/effect.json"
+      ]
+    },
+    {
+      "from": "source-0:animation_controllers/attack.json#controller.animation.eval.attack",
+      "to": "source-0:animations/attack.json#animation.eval.attack",
+      "target": "animation.eval.attack",
+      "relation": "controller-animation",
+      "path": "/states/default/animations",
+      "confidence": "resolved",
+      "candidates": [
+        "source-0:animations/attack.json#animation.eval.attack"
+      ]
+    },
+    {
+      "from": "source-0:entity/actor.json",
+      "to": "source-0:animations/attack.json#animation.eval.attack",
+      "target": "animation.eval.attack",
+      "relation": "animation-alias",
+      "path": "/description/animations/attack",
+      "confidence": "resolved",
+      "candidates": [
+        "source-0:animations/attack.json#animation.eval.attack"
+      ]
+    },
+    {
+      "from": "source-0:entity/actor.json",
+      "to": "source-0:animation_controllers/attack.json#controller.animation.eval.attack",
+      "target": "controller.animation.eval.attack",
+      "relation": "animation-alias",
+      "path": "/description/animations/controller",
+      "confidence": "resolved",
+      "candidates": [
+        "source-0:animation_controllers/attack.json#controller.animation.eval.attack"
+      ]
+    },
+    {
+      "from": "source-0:entity/actor.json",
+      "to": "source-0:animation_controllers/attack.json#controller.animation.eval.attack",
+      "target": "controller.animation.eval.attack",
+      "relation": "script-animation",
+      "path": "/description/scripts/animate/0",
+      "confidence": "resolved",
+      "candidates": [
+        "source-0:animation_controllers/attack.json#controller.animation.eval.attack"
+      ]
+    }
+  ],
+  "limitation": "Undirected dependency neighborhood; candidates and context-sensitive aliases remain explicitly uncertain. This is not proof of runtime execution."
+}

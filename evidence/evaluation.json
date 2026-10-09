@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "candidate": "",
+  "generatedAt": "2026-10-09T05:53:53.986Z",
+  "scope": "Executable artifact regression and visual-evidence audit. These results do not measure a model on unseen prompts; tasks.json supplies prompts and rubrics for candidate runs.",
+  "results": [
+    {
+      "id": "01-flame",
+      "description": "Eight-frame animated rising flame",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "frameCount": 8,
+        "lastFrame": 7
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\flame\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "02-shockwave",
+      "description": "Eight-block centerline radius, 0.9-second expanding wave",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "terminalCenterlineRadius": 8,
+        "terminalLifetime": 0.9,
+        "finiteThickness": true
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\demo\\final\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "03-blizzard",
+      "description": "Large drifting snow volume and moving gust layer",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "boundedHighQualityPeakSnow": 990,
+        "layers": 2
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\blizzard_snow\\inspection.json",
+          "minecraftRuntimeVerified": false
+        },
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\blizzard_gust\\inspection.json",
+          "minecraftRuntimeVerified": false
+        },
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\blizzard-combined\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "04-portal",
+      "description": "Synchronized rune, core and orbiting motes",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "layers": 3
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\portal_ring\\inspection.json",
+          "minecraftRuntimeVerified": false
+        },
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\portal_core\\inspection.json",
+          "minecraftRuntimeVerified": false
+        },
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\portal_motes\\inspection.json",
+          "minecraftRuntimeVerified": false
+        },
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\portal-combined\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "05-boss",
+      "description": "Finite warning, strike, impact, debris and smoke sequence",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "cues": 7,
+        "lastCueSeconds": 1.85,
+        "api": "2.9.0",
+        "runtimeAttachmentTested": false
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\boss-combined\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "06-missing-texture",
+      "description": "Detect absent PNG and use an explicit verified replacement",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "diagnosed": true,
+        "explicitReplacement": true,
+        "sourcePngSha256": "b21040c407047e83a2b451cc94189a062b13801bcc3d2f67ee227e8834c20482",
+        "changes": [
+          {
+            "path": "/particle_effect/description/basic_render_parameters/texture",
+            "before": "textures/missing",
+            "after": "textures/particle/pm/ring",
+            "change": "modified"
+          }
+        ]
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\demo\\final\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "07-molang-uv",
+      "description": "Reject malformed formula and ninth atlas frame; correct known intent",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "malformedRejected": true,
+        "overflowRejected": true,
+        "correctedFrameCount": 8,
+        "fadeIntentExplicit": true
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\flame\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "08-optimization",
+      "description": "Half spark count while preserving timing, silhouette and trajectory",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "countBefore": 96,
+        "countAfter": 48,
+        "preservedComponents": true,
+        "visualComparison": {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\optimization\\inspection.json",
+          "minecraftRuntimeVerified": false
+        },
+        "hardwareProfiling": false
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\previews\\explosion_sparks\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    },
+    {
+      "id": "09-trace",
+      "description": "Resolve client alias, animation locator and controller trigger",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "found": true,
+        "animation": "animation.eval.attack",
+        "controller": "controller.animation.eval.attack",
+        "locator": "origin",
+        "runtimeExecutionProven": false
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": false,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": []
+    },
+    {
+      "id": "10-mcp-preview",
+      "description": "Actual MCP tool calls, rendering, bound screenshot analysis",
+      "regressionPassed": true,
+      "error": null,
+      "details": {
+        "connected": true,
+        "toolNames": [
+          "particle_scan",
+          "particle_validate",
+          "particle_trace",
+          "particle_search",
+          "particle_preview"
+        ],
+        "rendered": true
+      },
+      "verification": {
+        "structurallyValid": true,
+        "referencesResolved": true,
+        "staticChecksPassed": true,
+        "previewVerified": true,
+        "minecraftRuntimeVerified": false
+      },
+      "previewEvidence": [
+        {
+          "previewVerified": true,
+          "issues": [],
+          "engine": "Wintersky 1.3.3 / Three.js r134",
+          "inspection": "evidence\\mcp-preview\\inspection.json",
+          "minecraftRuntimeVerified": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "regressionPassed": 10,
+    "previewVerified": 9,
+    "minecraftRuntimeVerified": 0
+  },
+  "runtimeEvidence": {
+    "minecraftRuntimeVerified": false,
+    "evidencePresent": false,
+    "issues": [
+      "No Minecraft runtime evidence supplied"
+    ]
+  }
+}

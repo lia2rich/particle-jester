@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "engine": "Wintersky 1.3.3 / Three.js r134",
+  "source": "https://github.com/JannisX11/wintersky",
+  "effect": "pm:portal_ring",
+  "cues": [
+    {
+      "time": 0,
+      "effect": "pm:portal_ring"
+    }
+  ],
+  "seed": 47,
+  "variables": {
+    "variable.quality": 1
+  },
+  "camera": [
+    6,
+    5,
+    10
+  ],
+  "target": [
+    0,
+    3,
+    0
+  ],
+  "captures": [
+    {
+      "file": "frame-0-0.10.png",
+      "time": 0.1,
+      "particles": 1,
+      "camera": [
+        6.000000000000001,
+        4.999999999999999,
+        10
+      ],
+      "target": [
+        0,
+        3,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "b04d6ba0f1bc92c36a18e25e06877882eee5cdd0e60868808e6d2b7695f7c15b",
+      "changedPixels": 2466
+    },
+    {
+      "file": "frame-1-1.30.png",
+      "time": 1.3,
+      "particles": 1,
+      "camera": [
+        6.000000000000001,
+        4.999999999999999,
+        10
+      ],
+      "target": [
+        0,
+        3,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "894be283b93de146e5140b5e7fe6a65195c700ffa0b518abca47065725343667",
+      "changedPixels": 11298
+    },
+    {
+      "file": "frame-2-2.50.png",
+      "time": 2.5,
+      "particles": 1,
+      "camera": [
+        6.000000000000001,
+        4.999999999999999,
+        10
+      ],
+      "target": [
+        0,
+        3,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "966dc5e796dbd18d3e38f3050061bc218706266f939538e3f0253a8916d505e8",
+      "changedPixels": 11348
+    },
+    {
+      "file": "frame-3-4.10.png",
+      "time": 4.1,
+      "particles": 0,
+      "camera": [
+        6.000000000000001,
+        4.999999999999999,
+        10
+      ],
+      "target": [
+        0,
+        3,
+        0
+      ],
+      "textureLoaded": true,
+      "sha256": "3f6847b45e11b1930d9523768d346c6e7eaafdce231d835054ee57bef48d0596",
+      "changedPixels": 2252
+    }
+  ],
+  "definitionHashes": {
+    "pm:beam": "e5dc60dccd535f69cd29c6114b27cfe11ea17e8179e84cba11f7c0632427e337",
+    "pm:blizzard_gust": "86cb9f43e09d0367590cef797d76c09b0b09e0ca4738b6f5d4b93635a45c5d4d",
+    "pm:blizzard_snow": "8a70e277cc0202fc83bff0b2eaec85f2ec265ef794d5b3d422a3b4eb18541a1e",
+    "pm:cinematic": "9cf9048253b8ee83d6c7f996267a4a7bfd427469e33546eeb553c2b46822426a",
+    "pm:debris": "46f08e597045806b79e879732d5a6b34a9e456e2bbfee77db329e9f75391da7a",
+    "pm:dust": "e2dcb0da130cae69c80a2ec0adcd77584c5ccc1ae8c01134bb791f0b86387332",
+    "pm:explosion_smoke": "0b81090bd16b3ab4d349ba8f97f91d654d24f345eaf90962e9db9b0aa44d97cf",
+    "pm:explosion_sparks": "c52b5a5c1611871ea20187fb62810e25d9704ff191150d952999a1c3dbbf652d",
+    "pm:flame": "78440231699e4b6b8faea2b80d0ad3cf287848de5218acde33726fb5f0ad9907",
+    "pm:lightning": "38706954dac136d89e1ba9a36b6fdd1826c0c4fe12d8118a0a83d672b86e4cec",
+    "pm:portal_core": "caaedaed2e306284822cc05262b5d8dbf52f11df5eb7dd6303cbd3aff36f1b29",
+    "pm:portal_motes": "7204a3ac6feaa661bbaa7df2867d2e43bf714b03bc4f175e5242d3987abec845",
+    "pm:portal_ring": "b2cde93a02adcfd0e8b41bbccda450be32a5b2116d0306a2d70662f8f8c66858",
+    "pm:shockwave": "3bc8a05375ab1a49c6ec4efccd64c7a279f430d28357761b78ee1e3ab7ce846b",
+    "pm:slash": "886d47bb2dc7d5b9c9bb94cdfdc7a5dca348c71a519c96cc311263ea8f619f88",
+    "pm:trail": "f4a8200dfd4e25021c670a6cae41a3ad529522fc7a8420b112bd083a9889030c",
+    "pm:vortex": "1da39bdf869b9da0a5d0dae0fb52dad021b5310ab2252f2cedaf0d53df8a8b83",
+    "pm:water": "f91c824d612c7dacd9e4ef1f1037104a5202893275559c5fd053f7356d31f00a"
+  },
+  "textureHashes": {
+    "textures/particle/pm/streak": "cac4fa2ddd62e6826410f9b597400ed628510f07f831432d396ac9fa01553ac1",
+    "textures/particle/pm/snow": "bdeba6d6ece305bb48b41e95dd9466f1d5fecdd1d3446ca564cc8b0127f51704",
+    "textures/particle/pm/soft": "1a4943e55a351dca62050e7f775c32fbc43adb354b522f8d555723c0285b75b0",
+    "textures/particle/pm/flame": "842e6f0a2746853947aaf86d24aae817f77dba682bd8db30d62583ea38c30255",
+    "textures/particle/pm/arc": "98b7f3146a2a6404a4ff5a865f6b839b5184ac9944a193b15ecf928451057c47",
+    "textures/particle/pm/rune": "f9110788a3378d29470a40ff27b4df9954efc60f1a6ccf4b489c60cb2b98621c",
+    "textures/particle/pm/ring": "b21040c407047e83a2b451cc94189a062b13801bcc3d2f67ee227e8834c20482",
+    "textures/particle/pm/slash": "a8d0e4c6ae2ccf43360103c7e172500e801355a274b220c163f47dcd5ea56bc0"
+  },
+  "browserErrors": [],
+  "rendered": true,
+  "previewVerified": false,
+  "minecraftRuntimeVerified": false,
+  "inspection": "Rendered images still require shape/motion/timing review. This capture command does not automatically approve visual quality.",
+  "limitations": [
+    "No block collisions or entity query/binding runtime",
+    "60 Hz preview differs from engine timing",
+    "Wintersky is an approximation, not the Minecraft engine",
+    "Seed controls this browser simulation, not Minecraft randomness"
+  ]
+}
