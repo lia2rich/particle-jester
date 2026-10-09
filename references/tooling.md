@@ -4,7 +4,9 @@ Run tools from the repository root. All output JSON is machine-readable. Exit 0 
 
 | Command | Purpose | Meaningful limits |
 | --- | --- | --- |
-| `scan <folder-or-archive>` | Full inventory, PNG decoding, paths, graph, variable/UV diagnostics | No source code execution; dynamic callers/queries and nested archives remain explicit |
+| `scan <folder-or-archive>` | Full inventory, PNG decoding, paths, graph, variable/UV diagnostics | No source code execution; dynamic callers/queries remain explicit |
+| `--nested` | Inspect nested ZIP-compatible packs in memory | Two levels; shared 50,000-file/512-MiB budget; unexpanded archives block complete verification |
+| `--jsonc` | Opt-in source parsing of comments/trailing commas | Records dialect and warnings, keeps bytes/hashes, rejects partial recovery; validation stays strict JSON |
 | `--overlay <root>` (repeat) | Resolve lower-priority supplied textures | Never assumes a vanilla fallback |
 | `--external variable.name` | Declare externally produced inputs | Caller must prove their producer |
 | `--bounds config.json` | Declare performance parameter ranges | Only supported formulas produce count bounds |

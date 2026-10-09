@@ -24,8 +24,6 @@ export function publicBytes(name,bytes,repository) {
   if(name==='references/setup.md')text=text.replace(/This app session supplies its user skills[^\n]*/, 'The installer defaults to the configured CODEX_HOME/skills location, or ~/.codex/skills for compatibility. Current [official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills) also documents ~/.agents/skills and repository .agents/skills. Use --target to select the location your host scans. Avoid duplicate installations. Codex detects changes automatically; restart if the skill does not appear.');
   if(name==='README.md'){
     text=text.replace('node tools/cli.mjs search data/user-evidence/catalog.json spiral','node tools/cli.mjs search work/catalog.json shockwave').replace('node tools/cli.mjs trace data/user-evidence/catalog.json cyd_mgspl:spell_cast_blue_1','node tools/cli.mjs trace work/catalog.json pm:shockwave');
-    const note='This is the public GitHub edition. The detailed private source catalog is excluded; all original tools, effects, pattern recipes and reviewed previews are included. Scan your own licensed packs to build a local catalog. See [publishing instructions](PUBLISHING.md).\n\n';
-    if(!text.includes(note))text=text.replace(/^(# [^\n]+\n\n)/, '$1'+note);
   }
   return Buffer.from(sanitize(text));
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "candidate": "",
-  "generatedAt": "2026-10-09T05:53:53.986Z",
+  "generatedAt": "2026-10-09T22:45:12.387Z",
   "scope": "Executable artifact regression and visual-evidence audit. These results do not measure a model on unseen prompts; tasks.json supplies prompts and rubrics for candidate runs.",
   "results": [
     {

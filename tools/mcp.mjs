@@ -21,7 +21,7 @@ function contained(value,{existing=true}={}) {
 }
 const string={type:'string'},tool=(name,description,properties,required)=>({name,description,inputSchema:{type:'object',properties,required,additionalProperties:false}});
 const definitions=[
-  tool('particle_scan','Inspect a pack/archive, PNG pixels, definitions and dependency graph; reports uncertainty.',{input:string,output:string,external:{type:'array',items:string}},['input']),
+  tool('particle_scan','Inspect a pack/archive, PNG pixels, definitions and dependency graph; reports uncertainty. Nested archives and JSONC require explicit opt-in.',{input:string,output:string,nested:{type:'boolean'},jsonc:{type:'boolean'},external:{type:'array',items:string}},['input']),
   tool('particle_validate','Conservative structural/MoLang/UV validation; never asserts runtime validity.',{input:string,texture:string,external:{type:'array',items:string}},['input']),
   tool('particle_trace','Trace identifier relationships from a saved catalog.',{catalog:string,identifier:string},['catalog','identifier']),
   tool('particle_search','Search a source catalog or knowledge index.',{index:string,query:string},['index','query']),
@@ -33,7 +33,7 @@ server.setRequestHandler(CallToolRequestSchema,async request=>{
   const {name,arguments:a={}}=request.params;
   try {
     let result;
-    if(name==='particle_scan'){result=scan(contained(a.input),{external:a.external});if(a.output)writeJson(contained(a.output,{existing:false}),result);}
+    if(name==='particle_scan'){result=scan(contained(a.input),{external:a.external,nested:a.nested===true,jsonc:a.jsonc===true});if(a.output)writeJson(contained(a.output,{existing:false}),result);}
     else if(name==='particle_validate')result=validateParticle(readJson(contained(a.input)),{texture:a.texture?inspectPng(fs.readFileSync(contained(a.texture))):null,external:a.external});
     else if(name==='particle_trace')result=trace(readJson(contained(a.catalog)),a.identifier);
     else if(name==='particle_search')result=searchIndex(readJson(contained(a.index)),a.query);

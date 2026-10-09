@@ -25,7 +25,8 @@ export function safePath(name) {
   return !normalized.startsWith('/') && !/^[a-z]:/i.test(normalized) && !normalized.split('/').some(x => x === '..') && !normalized.includes('\0');
 }
 export function readAssets(input, limits = { files: 50000, bytes: 512 * 1024 * 1024, entry: 64 * 1024 * 1024 }) {
-  const absolute = path.resolve(input), result = new Map();
+  const archiveBuffer = Buffer.isBuffer(input) ? input : null;
+  const absolute = archiveBuffer ? null : path.resolve(input), result = new Map();
   let total = 0;
   function add(name, bytes) {
     if (!safePath(name)) throw new Error(`Unsafe asset path: ${name}`);
@@ -34,12 +35,12 @@ export function readAssets(input, limits = { files: 50000, bytes: 512 * 1024 * 1
     if (result.has(slash(name))) throw new Error(`Duplicate archive path: ${name}`);
     result.set(slash(name), Buffer.from(bytes));
   }
-  if (fs.statSync(absolute).isDirectory()) {
+  if (!archiveBuffer && fs.statSync(absolute).isDirectory()) {
     for (const full of walk(absolute)) add(path.relative(absolute, full), fs.readFileSync(full));
   } else {
     // Check declared size before allocation. Never extract untrusted paths to disk.
     const seen=new Set();
-    const entries = unzipSync(fs.readFileSync(absolute), { filter: entry => {
+    const entries = unzipSync(archiveBuffer || fs.readFileSync(absolute), { filter: entry => {
       if (!safePath(entry.name)) throw new Error(`Unsafe archive path: ${entry.name}`);
       const normalized=slash(entry.name);
       if(seen.has(normalized))throw new Error(`Duplicate archive path: ${entry.name}`);

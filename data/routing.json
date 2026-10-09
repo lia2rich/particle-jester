@@ -137,7 +137,11 @@
       "source",
       "dependency",
       "trace",
-      "catalog"
+      "catalog",
+      "marketplace",
+      "bundle",
+      "nested",
+      "jsonc"
     ],
     "priority": 30
   }

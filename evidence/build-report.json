@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-09T05:44:52.014Z",
+  "generatedAt": "2026-10-09T22:45:14.720Z",
   "skills": 1,
   "originalDefinitions": 18,
   "originalTextures": 8,
   "tests": {
-    "count": 26,
+    "count": 33,
     "failures": 0
   },
   "evaluations": {
@@ -71,7 +71,6 @@
     "No target-client/runtime test was performed",
     "No unseen-prompt model benchmark was performed",
     "No Blockbench or Snowstorm-editor MCP connection was established; the project stdio bridge was actually connected and tested",
-    "Preview uses Wintersky with documented adapters and approximate sampling; collisions, queries, actor attachment and multiplayer require game tests",
-    "Full source catalog has 11 unresolved texture paths and unresolved ownership/variable contexts; source licenses/versions are unknown"
+    "Preview uses Wintersky with documented adapters and approximate sampling; collisions, queries, actor attachment and multiplayer require game tests"
   ]
 }

@@ -1,7 +1,8 @@
 import path from 'node:path';
 import { parse } from 'acorn';
 import { simple } from 'acorn-walk';
-import { readAssets, hash, slash } from './io.mjs';
+import { hash, slash } from './io.mjs';
+import {sourceAssets,parseSourceJson} from './source-input.mjs';
 import { inspectPng } from './texture.mjs';
 import { validateParticle } from './validate.mjs';
 
@@ -22,10 +23,14 @@ function techniques(c) {
   return found;
 }
 export function scan(input, options = {}) {
-  const sources = [input, ...(options.overlays || [])].map((root, i) => ({ root, id: `source-${i}`, assets: readAssets(root) }));
+  const budget={files:0,bytes:0};
+  const sources = [input, ...(options.overlays || [])].map((root, i) => ({ root, id: `source-${i}`, ...sourceAssets(root,{nested:options.nested,limits:options.limits,budget}) }));
   const files = [], nodes = [], edges = [], problems = [], particles = [], pngs = new Map(), parsed = new Map(), contexts = [];
   const uuids=new Map();
   const idFor = (s, file) => `${s.id}:${file}`;
+  const archives=sources.flatMap(s=>s.archives.map(a=>({...a,source:s.id})));
+  const coverage={nestedExpansion:!!options.nested,jsonc:!!options.jsonc,archives,complete:archives.every(a=>a.expanded)};
+  for(const archive of archives.filter(a=>!a.expanded))problems.push({code:'NESTED_ARCHIVE_UNINSPECTED',severity:'warning',file:`${archive.source}:${archive.path}`,message:`Nested archive not inspected (${archive.reason}); scan it explicitly or use --nested within depth/size limits`});
   for (const source of sources) {
     const manifests = [];
     for (const [file, bytes] of source.assets) {
@@ -34,7 +39,9 @@ export function scan(input, options = {}) {
       files.push(record);
       if (ext === '.json' || ext === '.material') {
         try {
-          const json = JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/, ''));
+          const document = parseSourceJson(bytes,{jsonc:options.jsonc}),json=document.value;
+          record.jsonDialect=document.dialect;
+          if(document.dialect==='jsonc')problems.push({code:'JSONC_ACCEPTED',severity:'warning',file:idFor(source,file),message:'Comments/trailing commas accepted by explicit JSONC source-inspection mode; original bytes and hash retained'});
           parsed.set(idFor(source, file), json);
           if (path.posix.basename(file) === 'manifest.json') {
             const packRoot=path.posix.dirname(file)==='.'?'':path.posix.dirname(file)+'/';
@@ -82,7 +89,10 @@ export function scan(input, options = {}) {
     const matches = candidates || byIdentifier.get(target) || [];
     edges.push({ from, to: matches.length === 1 ? matches[0].id : null, target, relation, path: where, confidence: matches.length === 1 ? 'resolved' : matches.length ? 'ambiguous' : 'unresolved', candidates: matches.map(x => x.id) });
   }
-  const duplicates = [...byIdentifier].filter(([, list]) => list.length > 1).map(([identifier, list]) => ({ identifier, files: list.map(x=>x.id), crossSource: new Set(list.map(x=>x.source)).size > 1 }));
+  const duplicates = [...byIdentifier].flatMap(([identifier,list])=>{
+    const kinds=new Map();for(const node of list){const group=kinds.get(node.kind)||[];group.push(node);kinds.set(node.kind,group);}
+    return [...kinds].filter(([,group])=>group.length>1).map(([kind,group])=>({identifier,kind,files:group.map(x=>x.id),crossSource:new Set(group.map(x=>x.source)).size>1}));
+  });
   for (const particle of particles) {
     const source = sources.find(s=>s.id===particle.source), texture = particle.render.texture;
     let resolution = { status: 'missing', chosen: null, candidates: [] };
@@ -185,7 +195,7 @@ export function scan(input, options = {}) {
   }
   const textureRecords = [...pngs].map(([id,metadata])=>({id,...metadata}));
   const uniqueNodes = [...new Map(nodes.map(n=>[n.id,n])).values()];
-  return { schemaVersion:1, sourceInventoryHash: hash(Buffer.from(files.map(f=>f.sha256).join('\n'))), generatedAt:new Date().toISOString(), contexts, files, particles, textures:textureRecords, graph:{nodes:uniqueNodes,edges}, duplicates, problems, summary:{files:files.length,particles:particles.length,textures:pngs.size,manifests:contexts.filter(c=>c.manifest).length,resolvedTextures:particles.filter(p=>p.textureResolution.status==='resolved').length,unresolvedTextures:particles.filter(p=>p.textureResolution.status!=='resolved').length,duplicateIdentifiers:duplicates.length,parseProblems:problems.length,graphEdges:edges.length}, provenance:{input:slash(path.resolve(input)),priority:'own pack, then explicit overlays in supplied order',licenses:options.license || 'unknown',rawAssetsRedistributed:false}, verification:{structurallyValid:particles.every(p=>p.analysis.structurallyValid),referencesResolved:particles.every(p=>p.textureResolution.status==='resolved') && !edges.some(e=>['secondary-effect','particle-trigger','particle-trigger-alias','controller-animation'].includes(e.relation) && !e.to),staticChecksPassed:particles.every(p=>p.analysis.staticChecksPassed) && !problems.some(p=>p.severity==='error'),previewVerified:false,minecraftRuntimeVerified:false} };
+  return { schemaVersion:1, sourceInventoryHash: hash(Buffer.from(files.map(f=>f.sha256).join('\n'))), generatedAt:new Date().toISOString(), contexts, coverage, files, particles, textures:textureRecords, graph:{nodes:uniqueNodes,edges}, duplicates, problems, summary:{files:files.length,particles:particles.length,textures:pngs.size,manifests:contexts.filter(c=>c.manifest).length,resolvedTextures:particles.filter(p=>p.textureResolution.status==='resolved').length,unresolvedTextures:particles.filter(p=>p.textureResolution.status!=='resolved').length,duplicateIdentifiers:duplicates.length,parseProblems:problems.length,graphEdges:edges.length}, provenance:{input:slash(path.resolve(input)),priority:'own pack, then explicit overlays in supplied order',licenses:options.license || 'unknown',rawAssetsRedistributed:false}, verification:{structurallyValid:particles.every(p=>p.analysis.structurallyValid),referencesResolved:coverage.complete && particles.every(p=>p.textureResolution.status==='resolved') && !edges.some(e=>['secondary-effect','particle-trigger','particle-trigger-alias','controller-animation'].includes(e.relation) && !e.to),staticChecksPassed:coverage.complete && particles.every(p=>p.analysis.staticChecksPassed) && !problems.some(p=>p.severity==='error'),previewVerified:false,minecraftRuntimeVerified:false} };
 }
 function safeTexture(value) { return !value.includes('\\') && !value.startsWith('/') && !value.includes(':') && !value.split('/').includes('..'); }
 export function trace(catalog, identifier) {

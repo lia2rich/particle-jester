@@ -1,37 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testsuites>
-	<testcase name="original pack contracts, all PNG paths and declared quality bounds agree" time="0.262431" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="component invention and wrong field types fail with actionable paths" time="0.002245" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="conflicting emission alternatives are rejected" time="0.001966" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="malformed MoLang and invented math fail; aliases normalize" time="0.003346" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="operator omission and untrusted JavaScript tokens fail" time="0.001142" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="unknown custom producers and unsupported loops remain unverified" time="0.002479" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="PNG alpha and painted bounds are measured from pixels" time="0.005377" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="scaled UV coordinates are legal; frame count fits eight cells" time="0.000906" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="overflowing and negative-step UVs are handled correctly" time="0.001468" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="missing named particle events fail" time="0.002134" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="source animation aliases and controller edges resolve by owner" time="0.039124" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="texture casing mismatch is reported without silently resolving" time="0.021274" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="explicit overlay resolves a missing texture and records scope" time="0.126031" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="duplicate identifiers are preserved as ambiguity" time="0.036638" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="safe archive inventory and roundtrip packaging work" time="0.214753" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="archive traversal, corrupted PNGs and malformed JSON fail honestly" time="0.021217" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="Script API literal and dynamic spawn calls are differentiated" time="0.053953" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="quality upper bounds estimate density, while absent bounds remain unknown" time="0.005633" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="safe repair fits the atlas without changing MoLang intent" time="0.006499" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="density scaling preserves shape, timing, colors and motion" time="0.004411" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="knowledge retrieval finds source-linked pattern text and diff reports changes" time="0.065290" classname="test" file="tests\engineering.test.mjs"/>
-	<testcase name="visual evidence audit approves reviewed frames and rejects changed pixels" time="0.285501" classname="test" file="tests\evidence.test.mjs"/>
-	<testcase name="cinematic evidence is invalidated by a changed child definition" time="0.170555" classname="test" file="tests\evidence.test.mjs"/>
-	<testcase name="missing runtime evidence remains unperformed" time="0.001565" classname="test" file="tests\evidence.test.mjs"/>
-	<testcase name="normalized duplicate ZIP paths are rejected" time="0.020200" classname="test" file="tests\evidence.test.mjs"/>
-	<testcase name="source and inspection reports satisfy independent metadata contracts" time="0.270254" classname="test" file="tests\evidence.test.mjs"/>
-	<!-- tests 26 -->
+	<testcase name="original pack contracts, all PNG paths and declared quality bounds agree" time="0.271551" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="component invention and wrong field types fail with actionable paths" time="0.009998" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="conflicting emission alternatives are rejected" time="0.001583" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="malformed MoLang and invented math fail; aliases normalize" time="0.014537" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="operator omission and untrusted JavaScript tokens fail" time="0.000906" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="unknown custom producers and unsupported loops remain unverified" time="0.001746" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="PNG alpha and painted bounds are measured from pixels" time="0.004246" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="scaled UV coordinates are legal; frame count fits eight cells" time="0.004769" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="overflowing and negative-step UVs are handled correctly" time="0.001102" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="missing named particle events fail" time="0.001748" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="source animation aliases and controller edges resolve by owner" time="0.034578" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="texture casing mismatch is reported without silently resolving" time="0.018538" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="explicit overlay resolves a missing texture and records scope" time="0.138281" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="duplicate identifiers are preserved as ambiguity" time="0.037595" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="safe archive inventory and roundtrip packaging work" time="0.172731" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="archive traversal, corrupted PNGs and malformed JSON fail honestly" time="0.009108" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="Script API literal and dynamic spawn calls are differentiated" time="0.043712" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="quality upper bounds estimate density, while absent bounds remain unknown" time="0.003359" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="safe repair fits the atlas without changing MoLang intent" time="0.004409" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="density scaling preserves shape, timing, colors and motion" time="0.003685" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="knowledge retrieval finds source-linked pattern text and diff reports changes" time="0.078839" classname="test" file="tests\engineering.test.mjs"/>
+	<testcase name="visual evidence audit approves reviewed frames and rejects changed pixels" time="0.350047" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="cinematic evidence is invalidated by a changed child definition" time="0.188162" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="missing runtime evidence remains unperformed" time="0.001660" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="normalized duplicate ZIP paths are rejected" time="0.014901" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="source and inspection reports satisfy independent metadata contracts" time="0.227605" classname="test" file="tests\evidence.test.mjs"/>
+	<testcase name="uninspected nested packs cannot pass complete static/reference verification" time="0.054562" classname="test" file="tests\source-input.test.mjs"/>
+	<testcase name="explicit nested scan preserves manifest roots, texture paths and original hashes" time="0.172496" classname="test" file="tests\source-input.test.mjs"/>
+	<testcase name="nested archive traversal and prefix collisions are rejected without extraction" time="0.048177" classname="test" file="tests\source-input.test.mjs"/>
+	<testcase name="nested depth and total decoded byte/file budgets are shared across archives" time="0.017046" classname="test" file="tests\source-input.test.mjs"/>
+	<testcase name="JSONC mode preserves string contents and rejects partial parses or JavaScript" time="0.012688" classname="test" file="tests\source-input.test.mjs"/>
+	<testcase name="JSONC inventory records dialect and immutable source hash instead of rewriting files" time="0.020462" classname="test" file="tests\source-input.test.mjs"/>
+	<testcase name="matching BP and RP entity identifiers are counterparts, not duplicate definitions" time="0.011705" classname="test" file="tests\source-input.test.mjs"/>
+	<!-- tests 33 -->
 	<!-- suites 0 -->
-	<!-- pass 26 -->
+	<!-- pass 33 -->
 	<!-- fail 0 -->
 	<!-- cancelled 0 -->
 	<!-- skipped 0 -->
 	<!-- todo 0 -->
-	<!-- duration_ms 1998.8865 -->
+	<!-- duration_ms 3967.5 -->
 </testsuites>

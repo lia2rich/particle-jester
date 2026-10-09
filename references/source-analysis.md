@@ -1,6 +1,6 @@
 # Whole-effect source analysis
 
-Input can be a folder, ZIP or mcpack. Archive entries are inspected in memory; traversal paths and oversized entries are rejected. Nested archives are inventoried as files and **not automatically expanded**; scan each nested pack explicitly. JSON parsing is strict; comments/trailing commas are reported, not executed or repaired invisibly. The supplied archive parsed without errors.
+Input can be a folder, ZIP or mcpack. Archive entries are inspected in memory; traversal paths and oversized entries are rejected. Nested archives are inventoried by default and keep coverage incomplete. Use `--nested` to expand two levels under one aggregate file/decoded-byte budget, or inspect each nested pack explicitly. Use `--jsonc` only for source inspection that needs comments/trailing commas; the parser checks its error list, labels relaxed files and preserves their source bytes/hashes. Strict JSON remains the default. Read [advanced effect patterns](advanced-effect-patterns.md) for bundle identity, variable maps, atlas inputs and layered effects.
 
 The catalog inventories every accessible file with a hash and size, all particle identifiers/components, every decodable PNG's pixels/alpha/dimensions, constant/dynamic UV metadata, potential techniques, variable reads/writes and related trigger edges. It discovers manifests and uses their directories as pack roots. If none exists, it labels an inferred loose root and keeps pack identity/version/license unknown.
 

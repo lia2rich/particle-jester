@@ -31,10 +31,10 @@ function doctor() {
 try {
   switch(command) {
     case 'scan': {
-      const result=scan(requireArg(),{overlays:all('--overlay'),license:value('--license'),origin:value('--origin'),external:all('--external'),parameterBounds:value('--bounds')?readJson(value('--bounds')):{}});
+      const result=scan(requireArg(),{overlays:all('--overlay'),nested:args.includes('--nested'),jsonc:args.includes('--jsonc'),license:value('--license'),origin:value('--origin'),external:all('--external'),parameterBounds:value('--bounds')?readJson(value('--bounds')):{}});
       const out=value('--out', 'work/catalog.json');writeJson(out,result);
       const report=value('--report');if(report){fs.mkdirSync(path.dirname(report),{recursive:true});fs.writeFileSync(report,inspectionReport(result));}
-      print({output:out,summary:result.summary,verification:result.verification});
+      print({output:out,summary:result.summary,coverage:result.coverage,verification:result.verification});
       if(args.includes('--strict') && !Object.values(result.verification).slice(0,3).every(Boolean))process.exitCode=1;
       break;
     }
@@ -61,7 +61,7 @@ try {
     }
     case 'doctor': {const result=doctor();print(result);if(!result.ok)process.exitCode=1;break;}
     default: console.log(`Particle Master CLI — run from repository root
-scan <pack|zip|mcpack> [--overlay <root>] [--external variable.name] [--license <label>] [--out catalog.json] [--report report.md] [--strict]
+scan <pack|zip|mcpack> [--nested] [--jsonc] [--overlay <root>] [--external variable.name] [--license <label>] [--out catalog.json] [--report report.md] [--strict]
 validate <particle.json> [--texture texture.png] [--external variable.name] [--strict] [--out report.json]
 texture <png> | molang <quoted-expression>
 trace <catalog.json> <particle:identifier>

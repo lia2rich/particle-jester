@@ -1,5 +1,7 @@
 # Particle Jester: vfx-design
 
+For layered auras, combat cues or externally configurable shapes, read [advanced effect patterns](../../../../references/advanced-effect-patterns.md). Separate emitter-age origins from particle-age paths, prove the child effect's inputs, and bound dynamic atlas selection and reciprocal formulas.
+
 Use for the effect's visual design and mathematical/layer architecture. Write the requested silhouette, world-space dimensions, stage timings, palette, depth, camera distance and quality tiers. Search example evidence and pattern cards; use source techniques while creating original textures/formulas.
 
 Choose one definition for a ring billboard or simple parametric path; use multiple definitions for distinct material/motion layers. Use animation/controller ownership or a bounded script sequence where synchronization/context demands it. Do not substitute a puff for a large requested ability.
